@@ -16,35 +16,35 @@ The <div> element defines a division or a section in an HTML document.
 
 Here are the block-level elements in HTML:
 
-<address>
-<article>
-<aside>
-<blockquote>
-<canvas>
-<dd>
-<div>
-<dl>
-<dt>
-<fieldset>
-<figcaption>
-<figure>
-<footer>
-<form>
-<h1>-<h6>
-<header>
-<hr>
-<li>
-<main>
-<nav>
-<noscript>
-<ol>
-<p>
-<pre>
-<section>
-<table>
-<tfoot>
-<ul>
-<video>
+<address> -> https://www.w3schools.com/tags/tag_address.asp
+<article> -> https://www.w3schools.com/tags/tag_article.asp
+<aside>   -> https://www.w3schools.com/tags/tag_aside.asp
+<blockquote> -> https://www.w3schools.com/tags/tag_blockquote.asp
+<canvas> -> https://www.w3schools.com/tags/tag_canvas.asp
+<dd> -> https://www.w3schools.com/tags/tag_dd.asp
+<div> -> https://www.w3schools.com/tags/tag_div.asp
+<dl> -> https://www.w3schools.com/tags/tag_dl.asp
+<dt> -> https://www.w3schools.com/tags/tag_dt.asp
+<fieldset> -> https://www.w3schools.com/tags/tag_fieldset.asp
+<figcaption> -> https://www.w3schools.com/tags/tag_figcaption.asp
+<figure> -> https://www.w3schools.com/tags/tag_figure.asp
+<footer> -> https://www.w3schools.com/tags/tag_footer.asp
+<form> -> https://www.w3schools.com/tags/tag_form.asp
+<h1>-<h6> -> https://www.w3schools.com/tags/tag_hn.asp
+<header> -> https://www.w3schools.com/tags/tag_header.asp
+<hr> -> https://www.w3schools.com/tags/tag_hr.asp
+<li> -> https://www.w3schools.com/tags/tag_li.asp
+<main> -> https://www.w3schools.com/tags/tag_main.asp
+<nav> -> https://www.w3schools.com/tags/tag_nav.asp
+<noscript> -> https://www.w3schools.com/tags/tag_noscript.asp
+<ol> -> https://www.w3schools.com/tags/tag_ol.asp
+<p> -> https://www.w3schools.com/tags/tag_p.asp
+<pre> -> https://www.w3schools.com/tags/tag_pre.asp
+<section> -> https://www.w3schools.com/tags/tag_section.asp
+<table> -> https://www.w3schools.com/tags/tag_table.asp
+<tfoot> -> https://www.w3schools.com/tags/tag_tfoot.asp
+<ul> -> https://www.w3schools.com/tags/tag_ul.asp
+<video> -> https://www.w3schools.com/tags/tag_video.asp
 ********************************************
 
 Inline Elements
@@ -55,38 +55,37 @@ An inline element only takes up as much width as necessary.
 
 Here are the inline elements in HTML:
 
-<a>
-<abbr>
-<acronym>
-<b>
-<bdo>
-<big>
-<br>
-<button>
-<cite>
-<code>
-<dfn>
-<em>
-<i>
-<img>
-<input>
-<kbd>
-<label>
-<map>
-<object>
-<output>
-<q>
-<samp>
-<script>
-<select>
-<small>
-<span>
-<strong>
-<sub>
-<sup>
-<textarea>
-<time>
-<tt>
-<var>
+<a> -> https://www.w3schools.com/tags/tag_a.asp
+<abbr> -> https://www.w3schools.com/tags/tag_abbr.asp
+<acronym> -> https://www.w3schools.com/tags/tag_acronym.asp
+<b> -> https://www.w3schools.com/tags/tag_b.asp
+<bdo> -> https://www.w3schools.com/tags/tag_bdo.asp
+<br> -> https://www.w3schools.com/tags/tag_br.asp
+<button> -> https://www.w3schools.com/tags/tag_button.asp
+<cite> -> https://www.w3schools.com/tags/tag_cite.asp
+<code> -> https://www.w3schools.com/tags/tag_code.asp
+<dfn> -> https://www.w3schools.com/tags/tag_dfn.asp
+<em> -> https://www.w3schools.com/tags/tag_em.asp
+<i> -> https://www.w3schools.com/tags/tag_i.asp
+<img> -> https://www.w3schools.com/tags/tag_img.asp
+<input> -> https://www.w3schools.com/tags/tag_input.asp
+<kbd> -> https://www.w3schools.com/tags/tag_kbd.asp
+<label> -> https://www.w3schools.com/tags/tag_label.asp
+<map> -> https://www.w3schools.com/tags/tag_map.asp
+<object> -> https://www.w3schools.com/tags/tag_object.asp
+<output> -> https://www.w3schools.com/tags/tag_output.asp
+<q> -> https://www.w3schools.com/tags/tag_q.asp
+<samp> -> https://www.w3schools.com/tags/tag_samp.asp
+<script> -> https://www.w3schools.com/tags/tag_script.asp
+<select> -> https://www.w3schools.com/tags/tag_select.asp
+<small> -> https://www.w3schools.com/tags/tag_small.asp
+<span> -> https://www.w3schools.com/tags/tag_span.asp
+<strong> -> https://www.w3schools.com/tags/tag_strong.asp
+<sub> -> https://www.w3schools.com/tags/tag_sub.asp
+<sup> -> https://www.w3schools.com/tags/tag_sup.asp
+<textarea> -> https://www.w3schools.com/tags/tag_textarea.asp
+<time> -> https://www.w3schools.com/tags/tag_time.asp
+<tt> -> https://www.w3schools.com/tags/tag_tt.asp
+<var> -> https://www.w3schools.com/tags/tag_var.asp
 
 This is a <span> element inside a paragraph.
