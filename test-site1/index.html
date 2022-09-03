@@ -7,56 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>test-site1</title>
     <style>
-        table,
-        th,
-        td {
-            border: 1px solid black
-        }
+
     </style>
 </head>
 
 <body>
-    <h1>hello</h1>
-    <!-- here a <p> tag is the block element and <strong> is the inline element  -->
-    <p>Lorem ipsum dolor sit amet, <strong>consectetur </strong> adipisicing elit. Necessitatibus sequi dignissimos quae
-        corrupti id non,
-        voluptatibus excepturi hic quaerat ex nesciunt natus sunt cumque dolorem dolor ipsa omnis aut ab.</p>
-    <img src="images\1_k0SazfSJ-tPSBbt2WDYIyw.png" alt="photo" width="100px" height="100px"><br>
-    <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started" target="_blank"
-        title="mozzilla_docs_learn_HTML">
-        <button class="btn1">click</button>
-    </a>
-    <ol>
-        <li>oldata1</li>
-        <li>oldata2</li>
-        <li>oldata3</li>
-        <li>oldata4</li>
-    </ol>
-    <ul>
-        <li>uldata1</li>
-        <li>uldata2</li>
-        <li>uldata3</li>
-        <li>uldata4</li>
-    </ul>
-    <!-- <table> defines a HTML table
-        <tr> defines a table row <th> defines a table header <td> defines a table cell -->
-    <table>
-        <tr>
-            <th>name</th>
-            <th>age</th>
-            <th>place</th>
-        </tr>
-        <tr>
-            <td>balaji</td>
-            <td>24</td>
-            <td>benglore</td>
-        </tr>
-        <tr>
-            <td>mani</td>
-            <td>23</td>
-            <td>vijawada</td>
-        </tr>
-    </table>
+    <button>click</button>
+
+    <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+        <input type="range" id="a" value="50">
+        +<input type="number" id="b" value="25">
+        =<output name="x" for="a b"></output>
+    </form>
 
 </body>
 
