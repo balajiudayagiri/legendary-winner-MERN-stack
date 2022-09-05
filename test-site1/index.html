@@ -9,12 +9,15 @@
 </head>
 
 <body>
-    <button id="btn3">click</button>
+    <button id="btn1">click 1</button>
+    <button id="btn2">click 2</button>
+    <button onclick="alert('alert from Inline JavaScript in HTML')">click 3</button>
     <script>
-        document.getElementById('btn').onclick = function () {
-            alert('hello world')
+        document.getElementById('btn2').onclick = function () {
+            alert('alert from Embedding JavaScript in HTML')
         }
     </script>
+    <script src="script\main.js"></script>
 
 </body>
 
