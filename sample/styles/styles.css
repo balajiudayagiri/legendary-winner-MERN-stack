@@ -1,0 +1,33 @@
+body {
+    margin: 0%;
+}
+
+#nav-bar {
+    background-color: rgb(16, 109, 163);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 30px;
+}
+
+
+
+#home-attribute,
+#galary-attribute,
+#about-attribute {
+    color: antiquewhite;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px;
+    align-items: center;
+}
+
+#home-page {
+    text-align: center;
+}
+
+.home-page-email,
+.home-page-password,
+.home-page-password {
+    padding: 10px;
+}
