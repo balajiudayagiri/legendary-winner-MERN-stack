@@ -5,22 +5,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles\styles.css">
     <title>Document</title>
 </head>
 
 <body>
     <header>
         <a href="#" class="logo">LOGO</a>
+
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar">Menu</label>
+
         <nav class="nav-bar">
             <ul>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Projects </a>
+                    <ul>
+                        <li><a href="#">project 1 </a>
+                            <ul>
+                                <li><a href="#">Java</a></li>
+                                <li><a href="#">JDBC</a></li>
+                                <li><a href="#">Oracle SQL</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">project 2 </a>
+                            <ul>
+                                <li><a href="#">github</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">project 3 </a>
+                            <ul>
+                                <li><a href="#">HTML5</a></li>
+                                <li><a href="#">CSS3</a></li>
+                                <li><a href="#">JavaScript</a></li>
+                                <li><a href="#">MongoDB</a></li>
+                                <li><a href="#">NodeJs</a></li>
+                                <li><a href="#">ExpressJs</a></li>
+                                <li><a href="#">ReactJs</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact Us</a></li>
 
             </ul>
         </nav>
     </header>
+
+    <div class="middle-body">
+        <div class="search-box">
+            <input type="text" class="search" placeholder="Search...">
+            <button type="submit" class="btn btn_common">Search</button>
+        </div>
+    </div>
 </body>
 
 </html>
