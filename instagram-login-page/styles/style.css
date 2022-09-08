@@ -1,0 +1,160 @@
+body {
+    background-image: linear-gradient(to bottom right, #8107f7, #a806e2, #f300bc, #f70745, #f70a16, #f74801, #f77500, #f3b301);
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.login-page-title {
+    margin-top: 30px;
+
+}
+
+.login-card {
+    background-color: white;
+    width: 338px;
+    height: 334px;
+    margin-top: 31px;
+    border-radius: 10px;
+}
+
+.login-card-data {
+    list-style-type: none;
+    padding-top: 25px;
+}
+
+.login-box {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 79px;
+    margin: 10px 0px;
+}
+
+#check-terms-condition {
+    background-color: #0095f6;
+}
+
+.login-box:hover {
+    border-color: #0095f6;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+.terms-ancher,
+.forgot-password {
+    color: #76787c;
+    text-decoration: none;
+}
+
+.login-btn {
+    margin: 10px 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 115px;
+    padding-right: 120px;
+    border: none;
+    color: white;
+    background-color: #b2dffc;
+}
+
+.login-btn:hover {
+    background-color: #0095f6;
+}
+
+.line-btwn {
+    margin: 15px 29px;
+}
+
+.facebook-login {
+    margin-left: 31px;
+    display: flex;
+}
+
+div.facebook-login a {
+
+    padding-left: 5px;
+    text-decoration: none;
+    color: #475993;
+}
+
+.create-account-card {
+    background-color: white;
+    width: 338px;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 14px;
+}
+
+.create-account {
+    text-align: center;
+}
+
+.p-app {
+    text-align: center;
+    margin-top: 21px;
+    color: white;
+}
+
+.get-the-app-card {
+    display: flex;
+}
+
+div.get-the-app-card div.download-ios,
+div.download-android {
+    background-color: rgb(30, 28, 32);
+    display: flex;
+}
+
+div.download-ios,
+div.download-android {
+    margin-right: 16px;
+    border-radius: 7px;
+}
+
+
+
+div.download-ios a.link-app-play-store p {
+    margin-bottom: 0px;
+
+}
+
+div.download-ios a.link-app-play-store h2 {
+    margin-top: 0px;
+    margin-right: 10px;
+}
+
+div.download-ios img {
+    padding-top: 13px;
+    padding-left: 13px;
+    padding-right: 10px;
+}
+
+
+
+div.download-android a.link-app-play-store p {
+    margin-bottom: 0px;
+}
+
+div.download-android a.link-app-play-store h2 {
+    margin-top: 0px;
+    margin-right: 10px;
+}
+
+div.download-android img {
+    padding-top: 13px;
+    padding-left: 13px;
+    padding-right: 10px;
+}
+
+
+
+.link-app-play-store {
+    font-size: x-small;
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
