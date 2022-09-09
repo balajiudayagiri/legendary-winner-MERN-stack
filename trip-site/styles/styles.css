@@ -50,8 +50,8 @@ header .nav-bar ul li {
 header .nav-bar ul li a {
     font-size: 20px;
     padding: 10px 20px;
-    color: bisque;
     display: block;
+    color: bisque;
 }
 
 header .nav-bar ul li a:hover {
