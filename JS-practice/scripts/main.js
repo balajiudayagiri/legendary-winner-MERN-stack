@@ -12,10 +12,10 @@ var s = 'BALAJI';
 var greet = `hello ${s} how are you`;
 document.getElementById('head1-3').innerHTML = greet;
 
-let price = 10.5;
-let day = prompt("enter the day");
+// let price = 10.5;
+// let day = prompt("enter the day");
 
-day === "monday" ? price += 10 : price -= 5;
+// day === "monday" ? price += 10 : price -= 5;
 
-document.getElementById('head1-4').innerHTML = `${day} ${price}rs`;
+// document.getElementById('head1-4').innerHTML = `${day} ${price}rs`;
 
