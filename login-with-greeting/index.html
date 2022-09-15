@@ -5,16 +5,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Document</title>
 </head>
 
 <body>
     <div class="main-box">
         <div class="left-greeting-box">
+            <h1 class="greeting-text">Hello</h1>
 
+            <h4 class="greeting-box-quote">Quote of the day</h4>
+            <p class="greeting-box-quote-part">Nobody made a greater mistake <br> than he who did nothing <br> because
+                he could do only a little.</p>
+            <p class="greating-box-author">-Edmund Burke</p>
         </div>
         <div class="right-video-and-login-box">
-
+            <iframe width="531" height="277" src="https://www.youtube.com/embed/upFoXg7myu8"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen style="border-radius: 10px;margin-top: 25px;"></iframe>
+            <div class="login-box">
+                <input type="text" placeholder="Username,Email or PhoneNo">
+                <input type="password" name="password" id="login-box-password-input" placeholder="Password">
+                <div class="terms-conditions">
+                    <input type="checkbox" name="T&C" id="login-box-checkbox">
+                    <label for="login-box-checkbox"><a href="#">Terms & Conditions</a></label>
+                </div>
+                <button type="submit">Login</button>
+            </div>
         </div>
     </div>
 </body>
