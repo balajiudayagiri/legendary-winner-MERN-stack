@@ -1,0 +1,26 @@
+* {
+    margin: 0px;
+}
+
+body {
+    background: linear-gradient(135deg, white, rgb(253, 52, 52), rgb(78, 72, 72), rgb(139, 0, 0), rgb(66, 0, 0), rgb(0, 0, 0));
+    background-attachment: fixed;
+    margin: 0px;
+}
+
+body>header {
+    color: aliceblue;
+    background-color: black;
+    height: 75px;
+}
+
+body>nav {
+    position: relative;
+    left: 333px;
+    bottom: 37px;
+    color: black;
+    background-color: white;
+    width: 700px;
+    height: 75px;
+    z-index: 1;
+}
