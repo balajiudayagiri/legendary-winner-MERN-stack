@@ -19,3 +19,13 @@ document.getElementById('head1-3').innerHTML = greet;
 
 // document.getElementById('head1-4').innerHTML = `${day} ${price}rs`;
 
+
+function add(a, b) {
+    return a + b;
+}
+document.getElementById('head1-4').innerHTML = add(5, 5);
+
+// function greeting() {
+//     alert('hello 16');
+// }
+// greeting();
