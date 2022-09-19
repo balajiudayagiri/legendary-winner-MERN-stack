@@ -4,6 +4,20 @@ body {
 
 }
 
+.para {
+    text-align: left;
+}
+
+legend {
+    background-color: #000;
+    color: #fff;
+    padding: 3px 6px;
+}
+
+input {
+    margin: .4rem;
+}
+
 h2::before {
     counter-increment: section;
     content: "section " counter(section)": ";
