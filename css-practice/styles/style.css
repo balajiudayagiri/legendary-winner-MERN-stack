@@ -1,0 +1,56 @@
+body {
+    text-align: center;
+    counter-reset: section;
+
+}
+
+h2::before {
+    counter-increment: section;
+    content: "section " counter(section)": ";
+}
+
+a::after {
+    content: " - (" attr(href)").";
+}
+
+div.demo {}
+
+div.demo-inside-box {
+    background-color: aqua;
+    width: calc(100% - 100px);
+}
+
+div.conic {
+    width: 300px;
+    height: 300px;
+    background-image: conic-gradient(red, yellow, green);
+    transition: width 2s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+div.conic:hover {
+    width: 700px;
+}
+
+div.max-box {
+    background-color: brown;
+    height: 150px;
+    width: max(50%, 300px);
+}
+
+div.myAni {
+    width: 300px;
+    height: 200px;
+    background: red;
+    animation: myMove 5s infinite;
+}
+
+@keyframes myMove {
+    from {
+        background-color: red;
+    }
+
+    to {
+        background-color: blue;
+    }
+}
