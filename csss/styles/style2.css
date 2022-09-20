@@ -1,0 +1,16 @@
+body {
+    height: 100%;
+    background-color: black;
+    color: aliceblue;
+}
+
+
+body>div.box {
+    height: 200px;
+    background: #CCCCCC;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}

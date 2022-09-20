@@ -1,4 +1,5 @@
 body {
+    height: 100%;
     text-align: center;
     counter-reset: section;
     background-color: #000;
@@ -8,6 +9,8 @@ body {
     align-items: center;
     margin-top: 111px;
 }
+
+
 
 
 /* .para {
