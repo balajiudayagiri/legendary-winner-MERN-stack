@@ -161,3 +161,7 @@ div.download-android img {
 }
 
 .info {}
+
+.check-terms-condition {
+    accent-color: gray;
+}
