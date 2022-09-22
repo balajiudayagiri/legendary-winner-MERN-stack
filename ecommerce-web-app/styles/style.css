@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Nabla&family=Roboto&display=swap');
+
+* {
+    margin: 0px;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+/* header */
+body>header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #262729;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body>header>a.header-logo {
+    margin-left: 20px;
+}
+
+body>header>a.header-logo>h1 {
+    font-family: 'Nabla', cursive;
+}
+
+body>header>div:nth-child(3) {
+    background-color: #ffff;
+    border-radius: 20px;
+}
+
+#search-box-in-header {
+    margin: 0px;
+    width: 500px;
+    height: 44px;
+    border-style: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding-left: 12px;
+}
+
+body>header>div:nth-child(3)>button {
+    height: 44px;
+    padding: 1px 20px;
+    border-style: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #ffdf65;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+body>header>div:nth-child(3)>button:hover {
+    background-color: #ff8824;
+}
+
+
+body>header>div.head-link-btn {
+    margin-right: 20px;
+}
+
+body>header>div.head-link-btn>a {
+    margin: 0px 10px;
+    padding: 10px 5px;
+    border-radius: 5px;
+    font-size: large;
+}
+
+body>header>div.head-link-btn>a:hover {
+    background-color: rgb(192, 192, 192);
+    color: black;
+}
+
+/* nav */
+
+body>nav {
+    height: 40px;
+    background-color: #56585d;
+}
+
+body>nav>ul {
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+body>nav>ul>li {
+    list-style-type: none;
+}
+
+body>div.box3-body-data {
+    margin: 15px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /*reapeting the same for the specified template*/
+    gap: 20px;
+    grid-auto-rows: minmax(400px, auto);
+
+}
+
+body>div>div {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+
+}
