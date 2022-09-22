@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nabla&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap');
 
 * {
     margin: 0px;
@@ -26,7 +27,8 @@ body>header>a.header-logo {
     margin-left: 20px;
 }
 
-body>header>a.header-logo>h1 {
+body>header>a.header-logo>h1,
+body>footer>a {
     font-family: 'Nabla', cursive;
 }
 
@@ -53,7 +55,6 @@ body>header>div:nth-child(3)>button {
     border-bottom-right-radius: 10px;
     background-color: #ffdf65;
     -webkit-transition-duration: 0.4s;
-    /* Safari */
     transition-duration: 0.4s;
     text-decoration: none;
     overflow: hidden;
@@ -99,18 +100,232 @@ body>nav>ul>li {
     list-style-type: none;
 }
 
+/* banner display */
+div.banner {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-family: 'Bakbak One', cursive;
+    font-size: xx-large;
+    background-color: #ffdf65;
+    z-index: -1;
+    box-shadow: 1px 20px 20px 15px #ffdf65;
+
+    ;
+}
+
+div.banner>h1 {
+    text-shadow: 10px 20px 18px #262729;
+}
+
+/* product display page */
 body>div.box3-body-data {
     margin: 15px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     /*reapeting the same for the specified template*/
-    gap: 20px;
+    gap: 40px;
     grid-auto-rows: minmax(400px, auto);
+    grid-template-areas:
+        "grid-box1 grid-box1 grid-box2 grid-box3"
+        "grid-box4 grid-box5 grid-box5 grid-box6"
+        "grid-box4 grid-box7 grid-box8 grid-box9"
+        "grid-box10 grid-box11 grid-box12 grid-box12"
+        "grid-box13 grid-box14 grid-box15 grid-box16"
+        "grid-box17 grid-box18 grid-box18 grid-box19"
+        "grid-box17 grid-box18 grid-box18 grid-box20"
+    ;
+}
+
+
+div.box3-body-data>div.grid-box1 {
+    grid-area: grid-box1;
+    background-image: url("../images/apple-iphone-14-pro.jpg");
+    background-size: cover;
+}
+
+div.box3-body-data>div.grid-box2 {
+    grid-area: grid-box2;
+    background-image: url("../images/Vivo-Phone.jpeg");
+    background-size: cover;
+}
+
+div.box3-body-data>div.grid-box3 {
+    grid-area: grid-box3;
+    background-image: url("../images/640px-Self-winding_wristwatch.jpg");
+    background-size: cover;
+}
+
+div.box3-body-data>div.grid-box4 {
+    grid-area: grid-box4;
+    background-image: url("../images/1ovwUq99.jpg");
+
+    background-size: cover;
+}
+
+div.box3-body-data>div.grid-box5 {
+    grid-area: grid-box5;
+    background-image: url("../images/asus-zenbook-space-edition.jpg");
+    background-size: cover;
+}
+
+div.box3-body-data>div.grid-box6 {
+    grid-area: grid-box6;
+    background-image: url("../images/HA244.jfif");
+    background-size: cover;
+    background-position: center;
+}
+
+div.box3-body-data>div.grid-box7 {
+    grid-area: grid-box7;
+    background-image: url("../images/college-backpacks-1659458619.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+div.box3-body-data>div.grid-box8 {
+    grid-area: grid-box8;
+    background-image: url("../images/deal-1.jpg");
+    background-size: cover;
+}
+
+div.box3-body-data>div.grid-box9 {
+    grid-area: grid-box9;
+    background-image: url("../images/depositphotos_126693854-stock-photo-set-of-body-care-products.jpg");
+    background-size: cover;
+}
+
+div.box3-body-data>div.grid-box10 {
+    grid-area: grid-box10;
+    background-image: url("../images/google-pixel-5-5g.jpg");
+    background-size: cover;
+}
+
+div.box3-body-data>div.grid-box11 {
+    grid-area: grid-box11;
+    background-image: url("../images/headphones.jpg");
+    background-size: cover;
+}
+
+div.box3-body-data>div.grid-box12 {
+    grid-area: grid-box12;
+    background-image: url("../images/home-cleaning.jpg");
+    background-size: cover;
+}
+
+div.box3-body-data>div.grid-box13 {
+    grid-area: grid-box13;
+    background-image: url("../images/istockphoto-118199633-170667a.jpg");
+    background-size: cover;
+}
+
+div.box3-body-data>div.grid-box14 {
+    grid-area: grid-box14;
+    background-image: url("../images/istockphoto-887360960-612x612.jpg");
+    background-size: cover;
+}
+
+div.box3-body-data>div.grid-box15 {
+    grid-area: grid-box15;
+    background-image: url("../images/medicine.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+div.box3-body-data>div.grid-box16 {
+    grid-area: grid-box16;
+    background-image: url("../images/pexels-photo-325153.jpeg");
+    background-size: cover;
+}
+
+div.box3-body-data>div.grid-box17 {
+    grid-area: grid-box17;
+    background-image: url("../images/plant-based-food-mc-220323-02-273c7b.jpg");
+    background-size: cover;
+}
+
+div.box3-body-data>div.grid-box18 {
+    grid-area: grid-box18;
+    background-image: url("../images/Best-Custom-PC-Builders.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+div.box3-body-data>div.grid-box19 {
+    grid-area: grid-box19;
+    background-image: url("../images/stationary.jpeg");
+    background-size: cover;
+}
+
+div.box3-body-data>div.grid-box20 {
+    grid-area: grid-box20;
+    background-image: url("../images/istockphoto-916092484-612x612.jpg");
+    background-size: cover;
+}
+
+div.box3-body-data>div.grid-box-bg-anim {
+    transition: 0.5s all ease-in-out;
+}
+
+div.box3-body-data>div.grid-box-bg-anim:hover {
+    transform: scale(1.1);
+}
+
+
+
+body>div.box3-body-data>div {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 16%);
+    /* box-shadow: (x axis)px (y axis)px (Blur)px (Spread)px (color of the shadow); */
 
 }
 
-body>div>div {
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+/* footer part */
+body>div.footer-above-the-actual-footer {
+    background-color: #56585d;
+    height: 232px;
+    padding: 30px 0px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
 
+body>div.footer-above-the-actual-footer>div>ul {
+    padding-left: 0px;
+    color: #000000;
+}
+
+body>div.footer-above-the-actual-footer>div>li {
+    list-style-type: none;
+    padding-left: 2px;
+}
+
+body>div.footer-above-the-actual-footer>div>li>a {
+    color: #202020;
+}
+
+body>footer {
+    padding: 30px 0px;
+    background-color: #202020;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+body>footer>div.line1 {
+    display: inline-flex;
+    padding: 10px;
+}
+
+body>footer>div.line1>h4 {
+    padding: 0px 10px;
+}
+
+body>footer>div.line2 {
+    padding-bottom: 20px;
 }
