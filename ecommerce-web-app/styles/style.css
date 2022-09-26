@@ -276,7 +276,7 @@ div.box3-body-data>div.grid-box-bg-anim:hover {
 
 
 
-body>div.box3-body-data>div {
+div.box3-body-data>div {
     background-color: #ffffff;
     box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 16%);
     /* box-shadow: (x axis)px (y axis)px (Blur)px (Spread)px (color of the shadow); */
@@ -284,7 +284,7 @@ body>div.box3-body-data>div {
 }
 
 /* footer part */
-body>div.footer-above-the-actual-footer {
+div.footer-above-the-actual-footer {
     background-color: #56585d;
     height: 232px;
     padding: 30px 0px;
@@ -293,17 +293,17 @@ body>div.footer-above-the-actual-footer {
     justify-content: space-evenly;
 }
 
-body>div.footer-above-the-actual-footer>div>ul {
+div.footer-above-the-actual-footer>div>ul {
     padding-left: 0px;
     color: #000000;
 }
 
-body>div.footer-above-the-actual-footer>div>li {
+div.footer-above-the-actual-footer>div>li {
     list-style-type: none;
     padding-left: 2px;
 }
 
-body>div.footer-above-the-actual-footer>div>li>a {
+div.footer-above-the-actual-footer>div>li>a {
     color: #202020;
 }
 
@@ -317,15 +317,15 @@ body>footer {
 
 }
 
-body>footer>div.line1 {
+footer>div.line1 {
     display: inline-flex;
     padding: 10px;
 }
 
-body>footer>div.line1>h4 {
+footer>div.line1>h4 {
     padding: 0px 10px;
 }
 
-body>footer>div.line2 {
+er>div.line2 {
     padding-bottom: 20px;
 }
