@@ -1,21 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
+
 body {
     margin: 0%;
     background-color: #4a86e8;
     text-align: start;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+a.f-p {
+    margin-left: 160px;
+    color: #4a86e8;
+}
+
+h1 {
+    font-weight: 300;
+}
+
+p {
+    font-weight: lighter;
+}
+
+td.register-card.c>h1 {
+    height: 60px;
+}
+
+tr>td.login-card.c>h1 {
+    height: 85px;
 }
 
 table.cards {
     margin-left: 237px;
+
+}
+
+hr {
+    margin: 20px 21px 20px 0px;
 }
 
 td.c {
-    background-color: aliceblue;
-    width: 320px;
+    padding-left: 25px;
+    background-color: #ffffff;
+    background-image: url("../images/ring.png");
+    background-repeat: no-repeat;
+    background-position: 100%;
+    width: 295px;
     height: 500px;
-
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px 7px gray;
 }
 
 table,
 td.c {
     border-spacing: 80px;
+}
+
+input {
+    width: 265px;
+    height: 30px;
+    margin-bottom: 15px;
+    border: 1px solid gray;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+}
+
+/* h1 {
+    margin: ;
+} */
+
+button.l-btn,
+button.r-btn {
+    height: 36px;
+    width: 274px;
+    border-radius: 5px;
+    border: 1px none;
+    background-color: #4a86e8;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+button.l-btn {
+    margin-top: 5px;
+}
+
+td.c>a>button {
+    width: 126px;
+    height: 36px;
+    border-radius: 5px;
+    border: 0.1px solid;
+    border-color: gray;
+    background-color: #ffffff;
+
+}
+
+td.c>a:nth-child(9)>button {
+    margin-right: 18px;
+}
+
+td.c>a:nth-child(8)>button {
+    margin-right: 18px;
 }
