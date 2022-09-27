@@ -1,0 +1,21 @@
+body {
+    margin: 0%;
+    background-color: #4a86e8;
+    text-align: start;
+}
+
+table.cards {
+    margin-left: 237px;
+}
+
+td.c {
+    background-color: aliceblue;
+    width: 320px;
+    height: 500px;
+
+}
+
+table,
+td.c {
+    border-spacing: 80px;
+}
