@@ -1,0 +1,9 @@
+div.card {
+    height: 300px;
+}
+
+div.product-type1-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
