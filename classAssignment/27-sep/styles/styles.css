@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
 
+/* @font-face {
+    font-family: Robo;
+    src: url('https: //fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+} */
 
 body {
     margin: 0%;
     background-color: #4a86e8;
     text-align: start;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif !important;
 }
 
 a {
@@ -25,12 +29,13 @@ p {
     font-weight: lighter;
 }
 
-td.register-card.c>h1 {
+td.register-card.c>h1,
+span.register-card {
     height: 60px;
 }
 
 tr>td.login-card.c>h1 {
-    height: 85px;
+    height: 72px;
 }
 
 table.cards {
@@ -51,7 +56,7 @@ td.c {
     width: 295px;
     height: 500px;
     border-radius: 15px;
-    box-shadow: 0px 0px 20px 7px gray;
+    box-shadow: 0px 0px 20px 7px rgb(145, 145, 145);
 }
 
 table,
@@ -61,17 +66,51 @@ td.c {
 
 input {
     width: 265px;
-    height: 30px;
+    height: 35px;
     margin-bottom: 15px;
-    border: 1px solid gray;
+    border: 1.5px solid gray;
     border-top-style: none;
     border-left-style: none;
     border-right-style: none;
 }
 
-/* h1 {
-    margin: ;
-} */
+input::placeholder {
+    font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+input:hover {
+    border: 1.5px solid #4a86e8;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    outline-style: none;
+}
+
+
+input:focus {
+    border: 1.5px solid #4a86e8;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    outline-style: none;
+}
+
+input:focus::placeholder {
+    color: #4a86e8;
+
+}
+
+/* ----------------------------------------- */
+
+
+input:focus::placeholder {
+    font-size: 10px;
+    position: relative;
+    top: -15px;
+    transition: 0.2s ease-out;
+}
+
+/* ----------------------------------------- */
 
 button.l-btn,
 button.r-btn {
@@ -88,7 +127,7 @@ button.l-btn {
     margin-top: 5px;
 }
 
-td.c>a>button {
+td.c>a.socials>button {
     width: 126px;
     height: 36px;
     border-radius: 5px;
@@ -104,4 +143,12 @@ td.c>a:nth-child(9)>button {
 
 td.c>a:nth-child(8)>button {
     margin-right: 18px;
+}
+
+p.foot-p {
+    margin-left: 30px;
+}
+
+p.foot-p>a {
+    color: #4a86e8;
 }

@@ -1,0 +1,75 @@
+body {
+    text-align: center;
+}
+
+div {
+    border: 2px solid black;
+    width: 500px;
+}
+
+hr {
+    margin: 2px;
+    height: 10px;
+}
+
+.p-s {
+    background-color: rgb(247, 78, 78);
+    position: static;
+}
+
+.p-r {
+    background-color: rgb(230, 247, 78);
+    position: relative;
+}
+
+.p-a {
+    background-color: rgb(140, 247, 78);
+    position: absolute;
+}
+
+.p-f {
+    background-color: rgb(78, 247, 225);
+    position: fixed;
+}
+
+.p-st {
+    background-color: rgb(109, 78, 247);
+    position: sticky;
+    top: 373px;
+}
+
+div.parent {
+    width: 1330px;
+    height: 1200px;
+    background: blue;
+    position: relative;
+}
+
+div.position-static {
+    background-color: rgb(247, 78, 78);
+    position: static;
+}
+
+div.position-relative {
+    background-color: rgb(230, 247, 78);
+    position: relative;
+    left: 500px;
+}
+
+div.position-absolute {
+    background-color: rgb(140, 247, 78);
+    position: absolute;
+    left: 500px;
+}
+
+div.position-fixed {
+    background-color: rgb(78, 247, 225);
+    position: fixed;
+    top: 500px;
+}
+
+div.position-sticky {
+    background-color: rgb(109, 78, 247);
+    position: sticky;
+    top: 170px;
+}

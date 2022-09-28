@@ -7,8 +7,9 @@
 
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
+    /* position: relative; */
 }
+
 
 /* header */
 body>header {
@@ -108,6 +109,12 @@ div.banner>h1 {
 body>nav {
     height: 40px;
     background-color: #56585d;
+}
+
+nav.box2-navigation-bar {
+    position: sticky;
+    top: 0px;
+    z-index: 1;
 }
 
 body>nav>ul {
