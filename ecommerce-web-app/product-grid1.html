@@ -43,9 +43,9 @@
     </nav>
     <div class="product-type1-page">
         <div class="item1-card product-card">
-            <img src="./images/iPhone14.jpg" alt="iphone 14" height="200px" width="200px">
+            <img src="./images/iPhone14.jpg" alt="iphone 14" id="img-one" height="200px" width="200px">
             <div class="item1-data">
-                <div class="item1-discription">
+                <div class="item1-discription" id="div-one">
                     <h3>iPhone14</h3>
                     <p>Big and bigger. Buy now. Capture even more sensational shots in all kinds of light — especially
                         low light. 5 colours.
@@ -59,9 +59,9 @@
             </div>
         </div>
         <div class="item2-card product-card">
-            <img src="./images/iphone13.png" alt="iphone 13" height="200px" width="200px">
+            <img src="./images/iphone13.png" alt="iphone 13" id="img-two" height="200px" width="200px">
             <div class="item2-data">
-                <div class="item2-discription">
+                <div class="item2-discription" id="div-two">
                     <h3>iPhone13</h3>
                     <p>iPhone 13 mini. Super Retina XDR display; 13.7 cm / 5.4‑inch (diagonal) all‑screen OLED display;
                         2340x1080-pixel
@@ -73,9 +73,9 @@
             </div>
         </div>
         <div class="item3-card product-card">
-            <img src="./images/iphone12.jpg" alt="iphone 12" height="200px" width="200px">
+            <img src="./images/iphone12.jpg" alt="iphone 12" id="img-three" height="200px" width="200px">
             <div class="item3-data">
-                <div class="item3-discription">
+                <div class="item3-discription" id="div-three">
                     <h3>iPhone12</h3>
                     <p>Apple iPhone 12 smartphone. Announced Oct 2020. Features 6.1″ display, Apple A14 Bionic chipset,
                         2815 mAh battery, 256
@@ -87,9 +87,9 @@
             </div>
         </div>
         <div class="item4-card product-card">
-            <img src="./images/iphone11.jpg" alt="iphone 11" height="200px" width="200px">
+            <img src="./images/iphone11.jpg" alt="iphone 11" id="img-four" height="200px" width="200px">
             <div class="item4-data">
-                <div class="item4-discription">
+                <div class="item4-discription" id="div-four">
                     <h3>iPhone11</h3>
                     <p>Colorful. Powerful. Essential. iPhone 11. An essential upgrade. Shoot 4K videos, beautiful
                         portraits, and sweeping
@@ -101,9 +101,9 @@
             </div>
         </div>
         <div class="item5-card product-card">
-            <img src="./images/iphoneSE.jpg" alt="iphone SE" height="200px" width="200px">
+            <img src="./images/iphoneSE.jpg" alt="iphone SE" id="img-five" height="200px" width="200px">
             <div class="item5-data">
-                <div class="item5-discription">
+                <div class="item5-discription" id="div-five">
                     <h3>iPhoneSE</h3>
                     <p>A super-powerful chip. A superstar camera. A leap in battery life. A pocket-size 11.94-centimetre
                         (4.7″) design.</p>
@@ -114,6 +114,12 @@
             </div>
         </div>
     </div>
+    <script>
+        function clickFunction() {
+            document.getElementById("btn").style.cssText = 'background-color: #ff8824;';
+        }
+    </script>
+    <script src="./script/main.js"></script>
 </body>
 
 </html>

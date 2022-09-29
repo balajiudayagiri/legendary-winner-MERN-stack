@@ -1,0 +1,14 @@
+div.demo {
+    background-color: red;
+    color: white;
+    width: 200px;
+    height: 200px;
+}
+
+@media screen and (max-width:200px) {
+    div.demo {
+        background-color: green;
+        width: 120px;
+        height: 120px;
+    }
+}
