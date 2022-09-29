@@ -1,0 +1,75 @@
+div.box1 {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 100px 100px 100px 100px 100px 100px 100px;
+    text-align: center;
+    align-self: center;
+    grid-template-areas:
+        "span1 span1 span1"
+        "span2 span3 span3"
+        "span2 span4 span4"
+        "span5 span5 span8"
+        "span6 span7 span8"
+        "span6 span7 span8"
+        "span6 span9 span9";
+}
+
+div.box1>span:nth-child(1) {
+    grid-area: span1;
+    color: white;
+    background-color: brown;
+}
+
+div.box1>span:nth-child(2) {
+    grid-area: span2;
+    color: white;
+    background-color: brown;
+}
+
+div.box1>span:nth-child(3) {
+    grid-area: span3;
+    color: white;
+    background-color: brown;
+}
+
+div.box1>span:nth-child(4) {
+    grid-area: span4;
+    color: white;
+    background-color: brown;
+}
+
+div.box1>span:nth-child(5) {
+    grid-area: span5;
+
+    color: white;
+    background-color: brown;
+}
+
+div.box1>span:nth-child(6) {
+    grid-area: span6;
+
+    color: white;
+    background-color: brown;
+}
+
+div.box1>span:nth-child(7) {
+    grid-area: span7;
+
+    color: white;
+    background-color: brown;
+}
+
+div.box1>span:nth-child(8) {
+    grid-area: span8;
+
+    color: white;
+    background-color: brown;
+}
+
+div.box1>span:nth-child(9) {
+    grid-area: span9;
+
+    color: white;
+    background-color: brown;
+}
