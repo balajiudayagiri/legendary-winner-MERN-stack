@@ -12,7 +12,7 @@ div.box1 {
         "span5 span5 span8"
         "span6 span7 span8"
         "span6 span7 span8"
-        "span6 span9 span9";
+        "span9 span9 span9";
 }
 
 div.box1>span:nth-child(1) {
