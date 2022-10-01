@@ -6,20 +6,21 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: small;
     margin-bottom: 50px;
+    height: 890px;
 }
 
 div.top-img {
     z-index: -1;
-    position: absolute;
     width: 100%;
-    height: 150px;
+    height: 4%;
 }
 
 div.info-cards {
+    top: 0;
     width: 85%;
     position: absolute;
     z-index: 1;
-    margin: 30px 100px;
+    margin: 2% 7.5%;
     display: grid;
     gap: 25px;
     grid-template-columns: 400px 200px;
@@ -97,8 +98,8 @@ body>div.info-cards>div.employee-info-card.card1>div>div.employment-details>span
 }
 
 div.employment-details {
-    margin-left: 50px;
-    margin-right: 150px;
+    margin-left: 4%;
+    margin-right: 25%;
 }
 
 div.info-cards>div.employee-info-card.card1>div>div.employment-details>span>p {
@@ -147,6 +148,7 @@ div.info-cards>div.employee-info-card.card1>div>div.card1-btn>a>button {
     border-style: none;
     box-shadow: -4px 4px 9px 1px lightgray;
     border-radius: 3px;
+    margin: 5px 0px;
 }
 
 div.info-cards>div.employee-info-card.card1>div>div.card1-btn>a:nth-child(2)>button {
@@ -168,14 +170,16 @@ div.info-cards>div.data-card>p>strong {
 }
 
 div.info-cards>div.data-card>hr {
-    margin-left: 15px;
-    margin-right: 15px;
-    border-top: 0px;
-    border-bottom: 0.5px solid gray;
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 0 10px;
+    padding: 0;
 }
 
 #file {
-    width: 620px;
+    width: 85%;
     height: 15px;
     margin-left: 35px;
     border: none;
@@ -228,7 +232,7 @@ div.card4>div {
     align-items: center;
 }
 
-div.card4>div>img {
+div.card4>div img {
     border-radius: 50px;
 
 }
@@ -240,4 +244,71 @@ div.card4>div>img:nth-child(2) {
 div.card4>div span {
     color: blue;
     margin-right: 10px;
+}
+
+@media screen and (max-width:1335px) {
+    div.card1>div>div.employment-details {
+        margin-right: 10%;
+    }
+}
+
+@media screen and (max-width:1165px) {
+    #file {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:1014px) {
+    div.info-cards {
+        grid-template-rows: 166px 270px 140px 230px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    body {
+        height: 1600px;
+    }
+
+    div.top-img {
+        width: 100%;
+        height: 4%;
+    }
+
+    div.info-cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    div.info-cards>div.card1>div {
+        display: contents;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div.info-cards>div.card1>nav {
+        display: flex;
+    }
+
+    div.info-cards>div.card4.data-card>div {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    div.employee-professional-info-card.card4.data-card>span {
+        display: flex;
+        flex-direction: column;
+    }
+
+    div.employee-professional-info-card.card4.data-card>span>p {
+        width: 100%;
+    }
+
+
+    div.employee-professional-info-card.card4.data-card>div:nth-child(8),
+    div:nth-child(9) {
+        margin-left: 0px;
+
+    }
 }
