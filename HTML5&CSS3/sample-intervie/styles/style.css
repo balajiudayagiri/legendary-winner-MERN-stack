@@ -1,0 +1,40 @@
+#main-box {
+    display: flex;
+}
+
+.inner-box {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+#one {
+    background-color: red;
+}
+
+#two {
+    background-color: green;
+}
+
+#three {
+    background-color: yellow;
+}
+
+@media screen and (max-width:400px) {
+    #main-box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #two {
+        order: 1
+    }
+
+    #one {
+        order: 2
+    }
+
+    #three {
+        order: 3
+    }
+}

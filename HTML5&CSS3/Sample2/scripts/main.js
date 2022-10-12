@@ -4,7 +4,5 @@ function calculationFunction() {
     console.log(a);
     console.log(b);
     console.log(a + b);
-    let result = a + b;
-
-    document.getElementById('output').innerHTML = result;
+    document.getElementById('output').innerHTML = a + b;
 }
