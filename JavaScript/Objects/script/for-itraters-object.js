@@ -2,7 +2,7 @@ const obj = {
     fname: 'Balaji',
     age: 25,
     id: 1274,
-    role: 'front-end developer',
+    // role: 'front-end developer',
     work: [
         'designing resposive wep applications',
         'fix web app bugs',
@@ -22,11 +22,20 @@ for (const key in obj) {
 // for (const value of obj) {
 //     console.log(value);
 // }
+// Uncaught TypeError: obj is not iterable
 // This code doesn't work in Chrome 42, saying undefined is not a function:
 // ---------------------------------------------
 
 // for iterating through the values of an objects we need to use the key and values
 
+for (const values of Object.entries(obj)) {
+    console.log(values);
+}
+
+for (const key of Object.keys(obj)) {
+    const val = obj[key];
+    console.log(key, val);
+}
 for (const [key, values] of Object.entries(obj)) {
     console.log(key, values);
 }
