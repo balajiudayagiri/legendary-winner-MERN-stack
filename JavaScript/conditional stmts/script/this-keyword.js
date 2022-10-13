@@ -1,11 +1,11 @@
-let age = "25";
+let age = 26;
 const obj = {
     fname: 'Balaji',
     age: 29,
     demo: function () {
         console.log('hi', this.fname);
         console.log('age', this.age);
-    },
+    }
 }
 obj.demo();
 console.log(obj.demo1);

@@ -25,6 +25,6 @@ const objj = JSON.stringify(obj);
 //convert the object into a string format (JSON string format)
 console.log(objj);
 console.log(typeof objj);
-const objtojson = JSON.parse(objj);
+const string_to_object = JSON.parse(objj);
 // convert the string into object format (JSON object fromat)
-console.log(objtojson.age);
+console.log(string_to_object);
