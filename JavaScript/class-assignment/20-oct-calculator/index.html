@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="calculator-app">
+        <div id="display">
+            <input type="text" name="calc-display" id="display-input">
+        </div>
+        <div id="calc-btn-box">
+            <button class="calc-btn" value="**2" onclick="calculation(this)">x<sup>2</sup></button>
+            <button class="calc-btn" value="**3" onclick="calculation(this)">x<sup>3</sup></button>
+            <button class="calc-btn" value="**" onclick="calculation(this)">x<sup>y</sup></button>
+            <button class="calc-btn" value="10**" onclick="calculation(this)">10<sup>x</sup></button>
+            <button class="calc-btn" id="btnAC">AC</button>
+            <button class="calc-btn" onclick="" id="btnC">&larr;</button>
+            <button class="calc-btn" onclick="calculation_for_sqrt(this)">&#8730;x</button>
+            <button class="calc-btn" value="/" onclick="calculation(this)">÷</button>
+            <button class="calc-btn" value="7" onclick="calculation(this)">7</button>
+            <button class="calc-btn" value="8" onclick="calculation(this)">8</button>
+            <button class="calc-btn" value="9" onclick="calculation(this)">9</button>
+            <button class="calc-btn" value="*" onclick="calculation(this)">x</button>
+            <button class="calc-btn" value="4" onclick="calculation(this)">4</button>
+            <button class="calc-btn" value="5" onclick="calculation(this)">5</button>
+            <button class="calc-btn" value="6" onclick="calculation(this)">6</button>
+            <button class="calc-btn" value="-" onclick="calculation(this)">-</button>
+            <button class="calc-btn" value="1" onclick="calculation(this)">1</button>
+            <button class="calc-btn" value="2" onclick="calculation(this)">2</button>
+            <button class="calc-btn" value="3" onclick="calculation(this)">3</button>
+            <button class="calc-btn" value="+" onclick="calculation(this)">+</button>
+            <button class="calc-btn" value="%" onclick="calculation(this)">%</button>
+            <button class="calc-btn" value="0" onclick="calculation(this)">0</button>
+            <button class="calc-btn" value="." onclick="calculation(this)">.</button>
+            <button class="calc-btn" onclick="result()">=</button>
+        </div>
+    </div>
+    <script src="./script/main.js"></script>
+</body>
+
+</html>

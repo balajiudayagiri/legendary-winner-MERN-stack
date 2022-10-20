@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+
+body,
+* {
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+    width: 99.5%;
+}
+
+#input-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    background-color: rgb(219, 166, 166);
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+#input-box {
+    height: 34px;
+    width: 250px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-style: none;
+}
+
+#input-add {
+    height: 36px;
+    width: 90px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: none;
+    background-color: rgb(206, 106, 106);
+    color: white;
+}
+
+#input-add:hover {
+    background-color: rgb(221, 83, 83);
+}
+
+#the-todo-list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+#todo,
+#in-progress,
+#completed {
+    height: 15%;
+    width: 20%;
+    text-align: center;
+}
+
+#todo {
+    color: red;
+    background-color: rgb(233, 70, 70);
+    border-radius: 10px;
+
+}
+
+#in-progress {
+    color: rgb(160, 160, 24);
+    background-color: rgb(179, 179, 119);
+    border-radius: 10px;
+}
+
+#completed {
+    color: green;
+    background-color: rgb(90, 156, 90);
+    border-radius: 10px;
+}
+
+ul>li {
+    text-align: start;
+    list-style-type: decimal;
+    height: 20px;
+    width: 270px;
+}
