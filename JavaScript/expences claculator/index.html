@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Expencess Note</title>
+</head>
+
+<body>
+    <header id="box1">
+        <h1>Balaji</h1>
+    </header>
+    <div id="data-input">
+        <div id="datebox">
+            <input type="date" name="date" id="input-date" class="inpData">
+        </div>
+        <div id="data-in-box">
+            <input type="text" class="inpData" placeholder="Food🍔🍕" name="food" id="input-food">
+            <input type="text" class="inpData" placeholder="Clothing👕🕴️" name="clothing" id="input-clothing">
+            <input type="text" class="inpData" placeholder="travelling🚌" name="travelling" id="input-travelling">
+            <input type="text" class="inpData" placeholder="personalExpencess💸" name="personalExpencess"
+                id="input-personalExpencess">
+        </div>
+
+        <button type="submit" id="addExpen">Add Expencess</button>
+    </div>
+    <div id="dataBox">
+        <h1 id="expen-list">Expencess List</h1>
+        <div id="list">
+            <ul id="date-list" class="dataListEntry">
+                <h3>Date</h3>
+            </ul>
+            <ul id="food-list" class="dataListEntry list-actualdata">
+                <h3>Food🍔🍕</h3>
+            </ul>
+            <ul id="clothing-list" class="dataListEntry list-actualdata">
+                <h3>Clothing👕🕴️</h3>
+            </ul>
+            <ul id="travelling-list" class="dataListEntry list-actualdata">
+                <h3>Travelling🚌</h3>
+            </ul>
+            <ul id="personalExpencess-list" class="dataListEntry list-actualdata">
+                <h3>PersonalExpencess💸</h3>
+            </ul>
+
+        </div>
+    </div>
+    <script src="./script/main.js"></script>
+</body>
+
+
+</html>
