@@ -32,5 +32,6 @@ input {
 }
 
 .list-actualdata {
+    list-style-type: none;
     text-align: end;
 }

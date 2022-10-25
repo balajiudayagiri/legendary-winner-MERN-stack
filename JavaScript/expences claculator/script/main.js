@@ -30,7 +30,7 @@ addData.addEventListener('click', () => {
         inputdata[3].value = '';
         inputdata[4].value = '';
     } else {
-        alert('please Enter the full data')
+        alert('please Enter the full data');
     }
 });
 
