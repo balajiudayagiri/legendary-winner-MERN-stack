@@ -10,18 +10,20 @@ console.log(arr);
 
 //anagram
 const str1 = 'race';
-const str2 = 'care';
+const str2 = 'crre';
 
 function anagramOrNot(string1, string2) {
     x = string1.split('').sort()
     y = string2.split('').sort()
-    for (let i = 0; i < x.length; i++) {
-        if (x[i].length === y[i].length) {
+    if (x.length === y.length) {//length
+        for (let i = 0; i < x.length; i++) {
             if (x[i] === y[i]) return `${string1} and ${string2} are anagram`
             else return `${string1} and ${string2} are not anagram`
-        } else return `${string1} and ${string2} are anagram because they have different no.of letters in the string`;
-    }
+        }
+    } else return `${string1} and ${string2} are anagram because they have different no.of letters in the string`;
 }
 
 const a = anagramOrNot(str1, str2)
 console.log(a);
+
+

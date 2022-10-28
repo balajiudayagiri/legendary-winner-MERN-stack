@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/carousel.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="form">
+        <form action="">
+            <h1>Register here</h1>
+            <label for="userId">userId:<input type="text" name="userId" id="userId" class="input-form-data"><span
+                    id="span-userid" class="span-data"></span></label><br><br>
+
+
+            <label for="password">password:<input type="password" minlength="7" maxlength="12" name="password"
+                    id="password" class="input-form-data"><span id="span-password"
+                    class="span-data"></span></label><br><br>
+
+
+            <label for="name">name:<input type="text" name="name" id="name" class="input-form-data"><span id="span-name"
+                    class="span-data"></span></label>
+            <br><br>
+
+            <label for="address">Address: <input type="text" name="address" id="address"></label><br><br>
+
+            <label for="select-country">Country:<select name="select-country" id="country" class="input-form-data">
+                    <option value="none" selected disabled hidden>Please select your country</option>
+                    <option value="Amarica">Amarica</option>
+                    <option value="Bangladesh">Bangladesh</option>
+                    <option value="India">India</option>
+                    <option value="Srilanka">Srilanka</option>
+                    <option value="england">england</option>
+                    <option value="Russia">Russia</option>
+                    <option value="Germany">Germany</option>
+                    <option value="italy">italy</option>
+                    <option value="korea">korea</option>
+                </select><span id="span-country" class="span-data"></span>
+            </label><br><br>
+
+            <label for="pincode">Pincode:<input type="number" name="pincode" id="pincode" class="input-form-data"><span
+                    id="span-pincode" class="span-data"></span></label><br><br>
+
+            <label for="mail">Email:<input type="email" name="mail" id="e-mail" class="input-form-data"><span
+                    id="span-email" class="span-data"></span></label>
+            <br><br>
+
+            <label for="gender">Sex:
+                <label for="male"> <input type="radio" name="gender" id="gender-selector-male" value="male">Male</label>
+                <label for="female"><input type="radio" name="gender" id="gender-selector-female"
+                        value="female">Female</label>
+                <span id="span-gender" class="span-data"></span></label><br><br>
+
+            <label for="lang">Language:
+                <input type="checkbox" value="english" name="english" id="english"
+                    onclick="if(this.checked) document.getElementById('non-english').checked=false">English
+                <input type="checkbox" value="non-english" name="non-english" id="non-english"
+                    onclick="if(this.checked) document.getElementById('english').checked=false">Non-English
+                <span id="span-language" class="span-data"></span></label><br><br>
+
+            <label for="about">About:<textarea name="about" id="about" cols="50" rows="10"></textarea></label><br><br>
+
+            <button type="button" id="submit-btn">Submit form</button>
+        </form>
+    </div>
+
+    <div id="table_form_data"></div>
+
+
+    <script src="./script/main.js"></script>
+</body>
+
+</html>
