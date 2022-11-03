@@ -1,0 +1,11 @@
+.catog_product {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.prod {
+    border: 1px solid black;
+    margin: 10px;
+
+}

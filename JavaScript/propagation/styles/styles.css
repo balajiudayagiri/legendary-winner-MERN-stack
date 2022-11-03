@@ -1,0 +1,23 @@
+.green {
+    background-color: green;
+    height: 270px;
+    width: 270px;
+    margin: auto;
+    display: flex;
+}
+
+.yellow {
+    background-color: yellow;
+    height: 180px;
+    width: 180px;
+    margin: auto;
+    display: flex;
+}
+
+.red {
+    background-color: red;
+    height: 90px;
+    width: 90px;
+    margin: auto;
+    display: flex;
+}
