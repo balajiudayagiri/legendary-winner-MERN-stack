@@ -59,8 +59,13 @@
 //     // Await expressions make promise-returning functions behave as though they're
 //     //  synchronous by suspending execution until the returned promise is fulfilled or
 //     // rejected
-//     const result = await sendingDataToServer('👌🆗📁 DONE');
+//     console.log('Sending data 📂-> -> -> ->📁');
+//     const result = sendingDataToServer('👌🆗📁 DONE');
 //     console.log(result);
+
+//     console.log('Sending data 📂-> -> -> ->📁');
+//     console.log('Sending data 📂-> -> -> ->📁');
+
 // }
 
 // asyncCall();
@@ -106,33 +111,43 @@
 // ------------------------------------------------------------------------------
 
 
-Array.prototype.mapPolyFill = function (callBackFn, value) {
-    let arr = [];
-    for (let value of this) {
-        arr.push(callBackFn(value, this))
-    }
-    return arr;
-}
+// Array.prototype.mapPolyFill = function (callBackFn, value) {
+//     let arr = [];
+//     for (let value of this) {
+//         arr.push(callBackFn(value, this))
+//     }
+//     return arr;
+// }
 
-const a = [12, 13, 14, 15, 16].mapPolyFill(c => c * 2);
-console.log(a);
+// const a = [12, 13, 14, 15, 16].mapPolyFill(c => c * 2);
+// console.log(a);
 
-Array.prototype.filterPolyFill = function (callBackFn, value) {
-    let arr = [];
-    for (const value of this) {
-        if (callBackFn(value)) {
-            arr.push(value)
-        }
-    }
-    return arr
-}
-const b = [2, 3, 4, 5, 4, 66, 88, 6, 7, 43, 32].filterPolyFill(s => s % 2 == 0)
-console.log(b);
+// Array.prototype.filterPolyFill = function (callBackFn, value) {
+//     let arr = [];
+//     for (const value of this) {
+//         if (callBackFn(value)) {
+//             arr.push(value)
+//         }
+//     }
+//     return arr
+// }
+// const b = [2, 3, 4, 5, 4, 66, 88, 6, 7, 43, 32].filterPolyFill(s => s % 2 == 0)
+// console.log(b);
 
-Array.prototype.reducePolyFill = function (callBackFn, value) {
-    let arr = this;
 
-}
-const c = [1, 2, 3, 4, 5, 6, 7, 8, 9].reducePolyFill((p, c) => p + c)
-console.log(c);
+
+// Array.prototype.reducePolyFill = function (callback, initialValue) {
+//     let index = 0;
+//     if (initialValue === undefined) {
+//         index = 1;
+//         initialValue = this[0]
+//     }
+//     for (; index < this.length; index++) {
+//         initialValue = callback(initialValue, this[index], index)
+//     }
+//     return initialValue
+// };
+// const c = [1, 2, 3, [4, 5, 6, 7], 8, 9].reducePolyFill((p, c) => p.concat(c), []);
+// console.log(c);
+
 
