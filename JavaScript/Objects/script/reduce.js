@@ -234,9 +234,7 @@ const empDetails = [
 const totalValue = empDetails.reduce(
     (previousValue, currentValue) => {
         return previousValue + currentValue.id;
-    },
-    0
-);
+    }, 0);
 console.log(totalValue);
 
 

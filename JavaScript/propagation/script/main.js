@@ -1,11 +1,14 @@
 const divs = document.querySelectorAll('div');
 
-function text(e) {
+divs[0].addEventListener('click', function (e) {
     console.log(this.classList.value);
     // e.stopPropagation();
-}
-// divs.forEach(div => div.addEventListener('click', text, false));
-
-divs[0].addEventListener('click', text, true);
-divs[1].addEventListener('click', text, true);
-divs[2].addEventListener('click', text, true);
+}, true);
+divs[1].addEventListener('click', function (e) {
+    console.log(this.classList.value);
+    e.stopPropagation();
+}, false);
+divs[2].addEventListener('click', function (e) {
+    // e.stopPropagation();
+    console.log(this.classList.value);
+}, false);

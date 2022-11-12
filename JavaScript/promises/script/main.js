@@ -23,31 +23,31 @@
 
 // ------------------------------------------------------------------------------
 
-// const p1 = new Promise((res, rej) => {
-//     setTimeout(res, 1000, 'one')
-// });
-// const p2 = new Promise((res, rej) => {
-//     setTimeout(res, 5000, 'five')
-// });
-// const p3 = new Promise((res, rej) => {
-//     setTimeout(res, 3000, 'three')
-// });
+const p1 = new Promise((res, rej) => {
+    setTimeout(res, 1000, 'one')
+});
+const p2 = new Promise((res, rej) => {
+    setTimeout(res, 5000, 'five')
+});
+const p3 = new Promise((res, rej) => {
+    setTimeout(res, 3000, 'three')
+});
 
-// Promise.all([p2, p3, p1]).then((values) => {
-//     console.log(values);
-// });
+Promise.all([p2, p3, p1]).then((values) => {
+    console.log(values);
+});
 
-// Promise.allSettled([p2, p3, p1]).then((values) => {
-//     console.log(values);
-// });
+Promise.allSettled([p2, p3, p1]).then((values) => {
+    console.log(values);
+});
 
-// Promise.any([p2, p3, p1]).then((values) => {
-//     console.log(values);
-// });
+Promise.any([p2, p3, p1]).then((values) => {
+    console.log(values);
+});
 
-// Promise.race([p2, p3, p1]).then((values) => {
-//     console.log(values);
-// });
+Promise.race([p2, p3, p1]).then((values) => {
+    console.log(values);
+});
 // ------------------------------------------------------------------------------
 
 // function sendingDataToServer(data) {
@@ -118,7 +118,6 @@
 //     }
 //     return arr;
 // }
-
 // const a = [12, 13, 14, 15, 16].mapPolyFill(c => c * 2);
 // console.log(a);
 
@@ -134,8 +133,6 @@
 // const b = [2, 3, 4, 5, 4, 66, 88, 6, 7, 43, 32].filterPolyFill(s => s % 2 == 0)
 // console.log(b);
 
-
-
 // Array.prototype.reducePolyFill = function (callback, initialValue) {
 //     let index = 0;
 //     if (initialValue === undefined) {
@@ -150,4 +147,45 @@
 // const c = [1, 2, 3, [4, 5, 6, 7], 8, 9].reducePolyFill((p, c) => p.concat(c), []);
 // console.log(c);
 
+// const obj = {
+//     fname: 'balaji',
+//     age: 25
+// }
+// const fun = function (a, b) {
+//     console.log(this.fname, this.age, a + b);
+// }
 
+// Function.prototype.callPolyfill = function (objectData = {}, ...args) {
+//     objectData.fn = this;
+//     objectData.fn(...args)
+// }
+// fun.callPolyfill(obj, 3, 4);
+
+// Function.prototype.applyPolyfill = function (objectData = {}, args = []) {
+//     if (typeof this !== 'function') {
+//         throw new Error(this + "it's not callable");
+//     }
+//     if (!Array.isArray(args)) {
+//         throw new TypeError('arguments should be an array')
+//     }
+//     objectData.fn = this;
+//     objectData.fn(...args)
+// }
+// fun.applyPolyfill(obj, [4, 5])
+
+// Function.prototype.bindPolyfill = function (objectData = {}, ...args) {
+//     objectData.fn = this;
+//     return () => objectData.fn(...args);
+
+// }
+// const aa = fun.bindPolyfill(obj, 9, 9);
+// aa();
+// -------------------------------------------------------------------------------------
+// const inputObj = document.getElementById('newdata');
+// const btnObj = document.getElementById('btn');
+
+// btnObj.addEventListener('click', () => {
+//     if (!inputObj.checkValidity()) {
+//         document.getElementById("ptag").innerHTML = inputObj.validationMessage;
+//     }
+// })

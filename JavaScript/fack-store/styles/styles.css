@@ -1,11 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
+
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    margin: 0px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body>h1 {
+    margin: 0px 0px 10px 0px;
+    padding: 10px 20px;
+    background-color: #353535;
+    color: white;
+    box-shadow: 0px 11px 20px 0px #353535;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+#root {
+    margin: 20px;
+}
+
 .catog_product {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin: 10px;
+    box-shadow: 0px 0px 20px 0px rgb(61 61 61 / 50%);
+    border-radius: 5px;
+    margin: 40px 0px;
+}
+
+div>h3.catog_product_head {
+    margin: 0px 10px;
+    font-size: x-large;
 }
 
 .prod {
-    border: 1px solid black;
+    padding: 5px;
     margin: 10px;
+    box-shadow: 0px 0px 4px 1px rgb(61 61 61 / 29%);
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
 
+div.prod>img {
+    transition: all .5s ease-in-out;
+    margin: 10px;
+    cursor: pointer;
+}
+
+div.prod:hover img {
+    transform: scale(1.2);
+}
+
+
+#product_dispaly_item {
+    display: flex;
+    margin: 45px 45px 10px 45px;
+}
+
+#product_dispaly_item>div {
+    margin: 25px;
+}
+
+#product_dispaly_item>img {
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 7px 7px 20px 0px grey;
+}
+
+.rating,
+.rating_display {
+    font-weight: bold;
+}
+
+#back_btn {
+    border-radius: 20px;
+    height: 34px;
+    width: 112px;
+    background-color: inherit;
+    border-style: none;
+    font-size: x-large;
+    background-color: rgba(101, 95, 160, 0.432);
+    color: aliceblue;
+}
+
+#back_btn:hover {
+    background-color: rgb(101, 95, 160);
+    color: aliceblue;
+    cursor: pointer;
+}
+
+#buy_or_addtoCart {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#buy_or_addtoCart>button {
+    border-style: none;
+    margin: 0px 20px;
+    height: 40px;
+    width: 90px;
+    background-color: #696969;
+    color: #ffff;
+}
+
+#buy_or_addtoCart>button:hover {
+    background-color: #353535;
 }

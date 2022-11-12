@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch Test",
+            "request": "launch",
+            "mainClass": "Test",
+            "projectName": "legendary-winner-MERN-stack_e682e05f"
+        },
+        {
             "name": "Launch Program",
             "program": "${workspaceFolder}/app.js",
             "request": "launch",
