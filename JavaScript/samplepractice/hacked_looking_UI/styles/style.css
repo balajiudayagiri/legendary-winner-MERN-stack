@@ -1,0 +1,13 @@
+body {
+    display: flex;
+    height: 618px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 224, 0);
+}
+
+#root {
+    border: 2px solid rgb(0, 224, 0);
+    padding: 20px;
+}

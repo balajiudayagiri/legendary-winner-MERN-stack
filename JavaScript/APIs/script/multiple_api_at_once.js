@@ -1,3 +1,15 @@
+const generateElement = (element, attr, content) => {
+    const createdElement = document.createElement(element);
+    if (attr && Object.keys(attr).length > 0) {
+        for (const key in attr) {
+            createdElement.setAttribute(key, attr[key])
+        }
+    }
+    if (content) {
+        createdElement.innerText = content
+    }
+    return createdElement
+}
 
 Promise.allSettled([
     fetch('https://dummyjson.com/products').then(res => res.json()),
@@ -8,4 +20,4 @@ Promise.allSettled([
     fetch('https://rickandmortyapi.com/api/').then(res => res.json()),
     fetch('https://api.publicapis.org/entries').then(res => res.json())
 ])
-    .then(response => console.log(response))
+    .then(response => console.log(response));

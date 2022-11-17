@@ -1,0 +1,13 @@
+body {
+    text-align: center;
+}
+
+#joke_btn {
+    height: 50px;
+    width: 200px;
+}
+
+#why_btn {
+    height: 50px;
+    width: 100px
+}
