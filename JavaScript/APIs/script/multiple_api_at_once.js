@@ -11,7 +11,7 @@ const generateElement = (element, attr, content) => {
     return createdElement
 }
 
-Promise.allSettled([
+Promise.all([
     fetch('https://dummyjson.com/products').then(res => res.json()),
     fetch('https://fakestoreapi.com/products').then(res => res.json()),
     fetch('https://reqres.in/api/users').then(res => res.json()),

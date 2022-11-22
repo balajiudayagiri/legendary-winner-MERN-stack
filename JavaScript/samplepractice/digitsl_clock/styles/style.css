@@ -1,0 +1,12 @@
+body {
+    height: 617px;
+    width: 1348px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1#time {
+    font-size: 200px;
+}
