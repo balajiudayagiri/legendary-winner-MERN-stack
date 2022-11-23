@@ -1,0 +1,19 @@
+div#product_data {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 312px 312px 312px 312px;
+    gap: 20px;
+}
+
+div.product_card {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px gray;
+}
+
+img.product_image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
