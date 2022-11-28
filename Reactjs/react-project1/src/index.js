@@ -3,17 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-// import Greeting from './components/class_components_props/greeting';
-// import Greetings from './components/funtional_components_props/hello';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <>
-    <App />
-    {/* <Greeting name='balaji' value={1997} /> */}
-    {/* <Greetings name='Udayagiri' /> */}
-
-  </>
+  // <React.StrictMode>
+  <App />
+  // </React.StrictMode >
 );
 
 // If you want to start measuring performance in your app, pass a function
