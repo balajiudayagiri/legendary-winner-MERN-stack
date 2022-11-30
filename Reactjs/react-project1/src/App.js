@@ -1,7 +1,11 @@
 // import logo from './logo.svg';
 import './App.css';
 import { Component } from 'react';
-import LoginComponent from './components/login_page/LoginComponent';
+import Facstore from './components/Main_Web_Folder/Facstore';
+// import ParentComp from './components/composition/ParentComp';
+// import Parent from './components/stateLift/Parent';
+// import Parent from './components/stateLifting-data-from-2child-to-1parent/Parent';
+// import LoginComponent from './components/login_page/LoginComponent';
 // import BodyLifecycle from './components/25-nov-lifecycle-of-compunents/Body-lifecycle';
 // import Demo from './components/25-nov-lifecycle-of-compunents/Demo';
 // import Component1 from './components/propDrilling/Component1';
@@ -30,6 +34,10 @@ class App extends Component {
       {/* <Demo data={[1, 2, 3, 4, 5, 6, 7]} /> */}
       {/* <Component1 value={100} /> */}
       {/* <LoginComponent /> */}
+      {/* <Parent /> */}
+      {/* <ParentComp /> */}
+      {/* <Parent /> */}
+      <Facstore />
     </>)
   }
 }

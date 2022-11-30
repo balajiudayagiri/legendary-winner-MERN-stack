@@ -1,0 +1,51 @@
+#authentication_page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+form.Login_card_form,
+form.registration_card_form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+
+}
+
+p.errorMessageUnderInputFields {
+    font-size: small;
+    font-weight: 600;
+    color: red
+}
+
+div.formbox_btn>button {
+    margin: 20px;
+    height: 40px;
+    width: 200px
+}
+
+div#pop_up_card {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.411);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div#pop_up_card>div.authen_box {
+    position: relative;
+    background-color: white;
+}
+
+form>button {
+    height: 36px;
+}
