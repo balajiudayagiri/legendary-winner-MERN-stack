@@ -18,7 +18,14 @@ export default class RegistrationPopUp extends Component {
             passwordBoxErrorStyle: {},
             confirmPasswordBoxErrorStyle: {},
             mobileNumberBoxErrorStyle: {},
-            addressBoxErrorStyle: {}
+            addressBoxErrorStyle: {},
+
+            nameValidation: false,
+            mailValidation: false,
+            passwordValidation: false,
+            confirmPasswordValidation: false,
+            mobileNumberValidation: false,
+            addressValidation: false,
         }
     }
     handleDataInput = (e) => {
@@ -34,7 +41,13 @@ export default class RegistrationPopUp extends Component {
             passwordBoxError: null,
             confirmPasswordBoxError: null,
             mobileNumberBoxError: null,
-            addressBoxError: null
+            addressBoxError: null,
+            nameBoxErrorStyle: {},
+            mailBoxErrorStyle: {},
+            passwordBoxErrorStyle: {},
+            confirmPasswordBoxErrorStyle: {},
+            mobileNumberBoxErrorStyle: {},
+            addressBoxErrorStyle: {}
         })
     }
     validateinputfills = (data) => {
@@ -61,7 +74,7 @@ export default class RegistrationPopUp extends Component {
                 passwordBoxError: 'Please enter password',
                 passwordBoxErrorStyle: { border: '1px solid red', backgroundColor: '#e7aeae99' }
             })
-        } else if (!(/^[a-zA-Z0-9\s@#$]{7,12}$/.test(data.password))) {
+        } else if (!(/^[a-zA-Z0-9\s@#$]{7,16}$/.test(data.password))) {
             this.setState({
                 passwordBoxError: 'Must have 8 charectors and atleast have 1 lowerCase, upperCase, number,@,#,$',
                 passwordBoxErrorStyle: { border: '1px solid red', backgroundColor: '#e7aeae99' }
@@ -94,6 +107,7 @@ export default class RegistrationPopUp extends Component {
     handleResult = (e) => {
         this.validateinputfills(this.state.registrationData)
         e.preventDefault()
+        console.log(this.state.registrationData);
     }
     handleChildElementClick = (e) => {
         e.stopPropagation();

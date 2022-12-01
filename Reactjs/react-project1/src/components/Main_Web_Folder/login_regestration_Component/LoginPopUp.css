@@ -31,9 +31,10 @@
     height: 187px;
 }
 
-form input {
-    width: 350px;
-    height: 30px;
-    border-radius: 5px;
-    border: 1px solid gray;
+.field-icon {
+    float: right;
+    margin-left: -25px;
+    margin-top: -25px;
+    position: relative;
+    z-index: 2;
 }

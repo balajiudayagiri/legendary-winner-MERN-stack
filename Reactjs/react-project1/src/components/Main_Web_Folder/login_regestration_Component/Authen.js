@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import LoginPopUp from './LoginPopUp'
 import './Authen.css';
 import RegistrationPopUp from './RegistrationPopUp';
+import img1 from '../images/AutumnSale.jpeg'
+import img2 from '../images/kids-wear-banner-design.jpg'
+import img3 from '../images/newCollection.jpg'
 
 export default class Authen extends Component {
     constructor(props) {
@@ -9,31 +12,44 @@ export default class Authen extends Component {
         this.state = {
             loginData: {},
             registerData: {},
-            card: null
+            card: null,
+            popUpBackground: {}
         }
     }
     handleClosePopUp = (event) => {
         this.setState({
-            card: null
+            card: null,
+            popUpBackground: {}
         })
     }
-
     handleLoginData = () => {
         this.setState({
-            card: <LoginPopUp handleClosePopUp={this.handleClosePopUp} />
+            card: <LoginPopUp handleClosePopUp={this.handleClosePopUp} />,
+            popUpBackground: { filter: ' blur(8px)' }
         })
     }
     handleRegistrationData = () => {
         this.setState({
-            card: <RegistrationPopUp handleClosePopUp={this.handleClosePopUp} />
+            card: <RegistrationPopUp handleClosePopUp={this.handleClosePopUp} />,
+            popUpBackground: { filter: ' blur(8px)' }
         })
     }
     render() {
         return (
             <div id='authentication_page'>
-                <div className='formbox_btn'>
-                    <button onClick={this.handleLoginData}>Login</button>
-                    <button onClick={this.handleRegistrationData}>Register</button>
+                <div id='main_login_box' style={this.state.popUpBackground}>
+                    <div id='gretting_box'>
+                        <img src={img1} alt='img' style={{ height: '300px', width: '300px' }} />
+                        <img src={img2} alt='img' style={{ height: '300px', width: '300px' }} />
+                        <img src={img3} alt='img' style={{ height: '300px', width: '300px' }} />
+                    </div>
+                    <div className='formbox_btn'>
+                        <h1 className='greeting_h1'>Welcome to FackStore</h1>
+                        <p className='greeting_p'>You will be the first to know about our latest styles,
+                            exclusive offers, and much more</p>
+                        <button onClick={this.handleLoginData}>Login</button>
+                        <button onClick={this.handleRegistrationData}>Register</button>
+                    </div>
                 </div>
                 {this.state.card}
             </div>
