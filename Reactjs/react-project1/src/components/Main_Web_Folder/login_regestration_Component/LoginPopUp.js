@@ -36,12 +36,14 @@ export default class LoginPopUp extends Component {
         if (!data.email) {
             this.setState({
                 mailBoxError: 'Please enter Email',
-                mailBoxErrorStyle: { border: '1px solid red', backgroundColor: '#e7aeae99' }
+                mailBoxErrorStyle: { border: '1px solid red', backgroundColor: '#e7aeae99' },
+                mailValidation: false
             })
         } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(data.email)) {
             this.setState({
                 mailBoxError: 'Please enter a valid Email format',
-                mailBoxErrorStyle: { border: '1px solid red', backgroundColor: '#e7aeae99' }
+                mailBoxErrorStyle: { border: '1px solid red', backgroundColor: '#e7aeae99' },
+                mailValidation: false
             })
         } else {
             this.setState({ mailValidation: true })
@@ -49,12 +51,14 @@ export default class LoginPopUp extends Component {
         if (!data.password) {
             this.setState({
                 passwordBoxError: 'Please enter password',
-                passwordBoxErrorStyle: { border: '1px solid red', backgroundColor: '#e7aeae99' }
+                passwordBoxErrorStyle: { border: '1px solid red', backgroundColor: '#e7aeae99' },
+                passwordValidation: false
             })
         } else if (!(/^[a-zA-Z0-9\s@#$]{7,16}$/.test(data.password))) {
             this.setState({
                 passwordBoxError: 'Must have 8 charectors and atleast have 1 lowerCase, upperCase, number,@,#,$',
-                passwordBoxErrorStyle: { border: '1px solid red', backgroundColor: '#e7aeae99' }
+                passwordBoxErrorStyle: { border: '1px solid red', backgroundColor: '#e7aeae99' },
+                passwordValidation: false
             })
         } else {
             this.setState({ passwordValidation: true })
