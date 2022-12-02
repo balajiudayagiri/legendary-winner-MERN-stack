@@ -18,10 +18,9 @@ export default class ProductPage extends Component {
 
     render() {
         return (
-
             <div id="product_data">
                 {this.state.data.map((item) => (
-                    <div keys={item.id.toString()} id={'item' + item.id} className='product_card'>
+                    <div key={item.id} id={'item' + item.id} className='product_card'>
                         <img src={item.image} alt='error' className="product_image" style={{ width: "100px", height: "100px" }} />
                         <h4>{item.title}</h4>
                         <h5>{'$ ' + item.price}</h5>

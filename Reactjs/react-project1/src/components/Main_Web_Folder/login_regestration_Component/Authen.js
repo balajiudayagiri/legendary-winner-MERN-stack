@@ -13,10 +13,15 @@ export default class Authen extends Component {
             loginData: {},
             registerData: {},
             card: null,
-            popUpBackground: {}
+            popUpBackground: {},
+
         }
     }
-    handleClosePopUp = (event) => {
+    handleAfterAuthentiaction = (data, childData) => {
+        this.props.handleAfterAuthentiaction(data, childData)
+        console.log(data, "from <Authen/>", childData);
+    }
+    handleClosePopUp = () => {
         this.setState({
             card: null,
             popUpBackground: {}
@@ -24,16 +29,17 @@ export default class Authen extends Component {
     }
     handleLoginData = () => {
         this.setState({
-            card: <LoginPopUp handleClosePopUp={this.handleClosePopUp} />,
+            card: <LoginPopUp handleClosePopUp={this.handleClosePopUp} handleAfterAuthentiaction={(data, childData) => this.handleAfterAuthentiaction(data, childData)} />,
             popUpBackground: { filter: ' blur(8px)' }
         })
     }
     handleRegistrationData = () => {
         this.setState({
-            card: <RegistrationPopUp handleClosePopUp={this.handleClosePopUp} />,
+            card: <RegistrationPopUp handleClosePopUp={this.handleClosePopUp} handleAfterAuthentiaction={(data, childData) => this.handleAfterAuthentiaction(data, childData)} />,
             popUpBackground: { filter: ' blur(8px)' }
         })
     }
+
     render() {
         return (
             <div id='authentication_page'>
@@ -44,7 +50,7 @@ export default class Authen extends Component {
                         <img src={img3} alt='img' style={{ height: '300px', width: '300px' }} />
                     </div>
                     <div className='formbox_btn'>
-                        <h1 className='greeting_h1'>Welcome to FackStore</h1>
+                        <h1 className='greeting_h1'>Welcome to FakeStore</h1>
                         <p className='greeting_p'>You will be the first to know about our latest styles,
                             exclusive offers, and much more</p>
                         <button onClick={this.handleLoginData}>Login</button>
