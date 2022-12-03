@@ -10,17 +10,24 @@ export default class Facstore extends Component {
         super(props)
         this.state = {
             validationResult: false,
-            childDataStore: ''
+            childDataStore: {}
         }
+    }
+    handlePrintDataInConsole = (info) => {
+        console.log(info, "from handlePrintDataInConsole in <FakeStore/>");
     }
 
     handleAfterAuthentiaction = (data, childData) => {
+        // let { infoFromChild } = { ...childData }
         this.setState({
             validationResult: data,
         })
-        console.log(data, "from <Facstore/>", "-----childData:::", childData);
+        this.handlePrintDataInConsole(childData)
+        console.log(data, "from <Facstore/>", "-----childData:::",);
+        // return infoFromChild
     }
     render() {
+
         return (<>
             <Header />
             {this.state.validationResult ?

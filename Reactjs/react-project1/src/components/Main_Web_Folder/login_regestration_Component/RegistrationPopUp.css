@@ -21,6 +21,10 @@
 }
 
 #registration_card>button:hover {
-    background-color: #463737;
+    background-color: #696969;
     color: aliceblue;
+}
+
+input#firstName {
+    margin: 0px 10px 0px 0px;
 }

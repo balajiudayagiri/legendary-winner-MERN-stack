@@ -46,92 +46,68 @@ export default class RegistrationPopUp extends Component {
         })
     }
     validateinputfills = (data) => {
-        let nameValidation = false,
-            mailValidation = false,
-            passwordValidation = false,
-            confirmPasswordValidation = false,
-            mobileNumberValidation = false,
-            addressValidation = false;
-        // { border: '1px solid red', backgroundColor: '#e7aeae99', color: 'white' }
+        let validation = true
         if (!(data.firstName && data.lastName)) {
             this.setState({
                 nameBoxError: 'Please enter your full name',
                 nameBoxErrorStyle: { border: '1px solid red', backgroundColor: '#e7aeae99' }
             })
-            nameValidation = false
-        } else {
-            nameValidation = true
+            validation = false
         }
         if (!data.email) {
             this.setState({
                 mailBoxError: 'Please enter Email',
                 mailBoxErrorStyle: { border: '1px solid red', backgroundColor: '#e7aeae99' }
             })
-            mailValidation = false
+            validation = false
         } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(data.email)) {
             this.setState({
                 mailBoxError: 'Please enter a valid Email format',
                 mailBoxErrorStyle: { border: '1px solid red', backgroundColor: '#e7aeae99' }
             })
-            mailValidation = false
-        } else {
-            mailValidation = true
+            validation = false
         }
         if (!data.password) {
             this.setState({
                 passwordBoxError: 'Please enter password',
                 passwordBoxErrorStyle: { border: '1px solid red', backgroundColor: '#e7aeae99' }
             })
-            passwordValidation = false
+            validation = false
         } else if (!(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/.test(data.password))) {
             this.setState({
                 passwordBoxError: 'Must have 8 charectors and atleast have 1 lowerCase, upperCase, number,@,#,$',
                 passwordBoxErrorStyle: { border: '1px solid red', backgroundColor: '#e7aeae99' }
             })
-            passwordValidation = false
-        } else {
-            passwordValidation = true
+            validation = false
         }
         if (!(data.confirmPassword === data.password)) {
             this.setState({
                 confirmPasswordBoxError: "Passwords doesn't match",
                 confirmPasswordBoxErrorStyle: { border: '1px solid red', backgroundColor: '#e7aeae99' }
             })
-            confirmPasswordValidation = false
-        } else {
-            confirmPasswordValidation = true
+            validation = false
         }
         if (!(data.mobile_number)) {
             this.setState({
                 mobileNumberBoxError: "please enter your mobile number",
                 mobileNumberBoxErrorStyle: { border: '1px solid red', backgroundColor: '#e7aeae99' }
             })
-            mobileNumberValidation = false
+            validation = false
         } else if (!(data.mobile_number.length === 10)) {
             this.setState({
                 mobileNumberBoxError: "please enter a valid 10 digit number",
                 mobileNumberBoxErrorStyle: { border: '1px solid red', backgroundColor: '#e7aeae99' }
             })
-            mobileNumberValidation = false
-        } else {
-            mobileNumberValidation = true
+            validation = false
         }
         if (!(data.address)) {
             this.setState({
                 addressBoxError: "please enter your full address",
                 addressBoxErrorStyle: { border: '1px solid red', backgroundColor: '#e7aeae99' }
             })
-            addressValidation = false
-        } else {
-            addressValidation = true
+            validation = false
         }
-        if (nameValidation &&
-            mailValidation &&
-            passwordValidation &&
-            confirmPasswordValidation &&
-            mobileNumberValidation &&
-            addressValidation) return true
-        else return false
+        return validation;
     }
     handleResult = (e) => {
         e.preventDefault()

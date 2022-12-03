@@ -28,39 +28,34 @@ export default class LoginPopUp extends Component {
         })
     }
     validateinputfills = (data) => {
-        let emailValidate = false, passwordValidate = false
+        let validate = true
         if (!data.email) {
             this.setState({
                 mailBoxError: 'Please enter Email',
                 mailBoxErrorStyle: { border: '1px solid red', backgroundColor: '#e7aeae99' },
             })
-            emailValidate = false
+            validate = false
         } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(data.email)) {
             this.setState({
                 mailBoxError: 'Please enter a valid Email format',
                 mailBoxErrorStyle: { border: '1px solid red', backgroundColor: '#e7aeae99' },
             })
-            emailValidate = false
-        } else {
-            emailValidate = true
+            validate = false
         }
         if (!data.password) {
             this.setState({
                 passwordBoxError: 'Please enter password',
                 passwordBoxErrorStyle: { border: '1px solid red', backgroundColor: '#e7aeae99' },
             })
-            passwordValidate = false
+            validate = false
         } else if (!(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/.test(data.password))) {
             this.setState({
                 passwordBoxError: 'Must have 8 charectors and atleast have 1 lowerCase, upperCase, number,@,#,$',
                 passwordBoxErrorStyle: { border: '1px solid red', backgroundColor: '#e7aeae99' },
             })
-            passwordValidate = false
-        } else {
-            passwordValidate = true
+            validate = false
         }
-        if (emailValidate && passwordValidate) return true
-        else return false
+        return validate;
     }
     handleResult = (e) => {
         e.preventDefault();

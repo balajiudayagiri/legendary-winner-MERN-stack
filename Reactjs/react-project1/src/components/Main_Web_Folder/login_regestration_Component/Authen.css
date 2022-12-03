@@ -179,3 +179,8 @@ input::-webkit-inner-spin-button {
 #main_login_box>div.formbox_btn {
     margin-bottom: 115px;
 }
+
+p.errorMessageUnderInputFields {
+    margin: 5px 0px;
+    height: 18px;
+}
