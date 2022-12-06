@@ -22,3 +22,8 @@ div#root {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+h1#greeting_homePage {
+    color: #fff;
+    text-align: center;
+}

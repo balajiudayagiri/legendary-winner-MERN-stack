@@ -1,7 +1,10 @@
 // import logo from './logo.svg';
 import './App.css';
 import { Component } from 'react';
-import Facstore from './components/Main_Web_Folder/Facstore';
+import TableData from './functional_compunents/06Dec_test/TableData';
+// import TableData from './components/06Dec_TEST/TableData';
+// import Timer from './functional_compunents/timer/Timer';
+// import Facstore from './components/Main_Web_Folder/Facstore';
 // import ParentComp from './components/composition/ParentComp';
 // import Parent from './components/stateLift/Parent';
 // import Parent from './components/stateLifting-data-from-2child-to-1parent/Parent';
@@ -20,7 +23,6 @@ import Facstore from './components/Main_Web_Folder/Facstore';
 // import Greetings from './components/funtional_components_props/hello';
 
 
-
 class App extends Component {
   render() {
     return (<>
@@ -37,7 +39,10 @@ class App extends Component {
       {/* <Parent /> */}
       {/* <ParentComp /> */}
       {/* <Parent /> */}
-      <Facstore />
+      {/* <Facstore /> */}
+      {/* <Timer /> */}
+      {/* <TableData /> */}
+      <TableData />
     </>)
   }
 }
