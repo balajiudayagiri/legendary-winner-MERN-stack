@@ -7,7 +7,6 @@ export default function enhancedComponent(WrapperComponent) {
         const handleONMouseOut = () => setShow(false)
         return (<div onMouseOver={handleONMouseOver} onMouseOut={handleONMouseOut}>
             <WrapperComponent {...props} color={show ? 'red' : 'black'} data={show} />
-            { }
         </div>)
     }
 }
