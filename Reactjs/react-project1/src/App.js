@@ -1,7 +1,9 @@
 // import logo from './logo.svg';
 import './App.css';
 import { Component } from 'react';
-import TableData from './functional_compunents/06Dec_test/TableData';
+import HOC from './functional_compunents/HOCs/HOC';
+// import Reqres from './functional_compunents/fetchingDataFromReqres/Reqres';
+// import TableData from './functional_compunents/06Dec_test/TableData';
 // import TableData from './components/06Dec_TEST/TableData';
 // import Timer from './functional_compunents/timer/Timer';
 // import Facstore from './components/Main_Web_Folder/Facstore';
@@ -42,7 +44,9 @@ class App extends Component {
       {/* <Facstore /> */}
       {/* <Timer /> */}
       {/* <TableData /> */}
-      <TableData />
+      {/* <TableData /> */}
+      {/* <Reqres /> */}
+      <HOC />
     </>)
   }
 }
