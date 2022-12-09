@@ -1,7 +1,11 @@
 // import logo from './logo.svg';
 import './App.css';
 import { Component } from 'react';
-import HOC from './functional_compunents/HOCs/HOC';
+// import GrandParent from './functional_compunents/ContextAPI/GrandParent';
+// import GrandParent from './components/ContextAPI/GrandParent';
+// import MyRefs from './components/RefComp/MyRefs';
+// import BodyPortal from './components/Portals/BodyPortal';
+// import HOC from './functional_compunents/HOCs/HOC';
 // import Reqres from './functional_compunents/fetchingDataFromReqres/Reqres';
 // import TableData from './functional_compunents/06Dec_test/TableData';
 // import TableData from './components/06Dec_TEST/TableData';
@@ -46,7 +50,11 @@ class App extends Component {
       {/* <TableData /> */}
       {/* <TableData /> */}
       {/* <Reqres /> */}
-      <HOC />
+      {/* <HOC /> */}
+      {/* <BodyPortal /> */}
+      {/* <MyRefs /> */}
+      {/* <GrandParent /> */}
+      {/* <GrandParent /> */}
     </>)
   }
 }
