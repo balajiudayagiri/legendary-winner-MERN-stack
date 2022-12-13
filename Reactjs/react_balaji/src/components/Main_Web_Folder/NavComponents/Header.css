@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+
+#header_bar {
+    height: 50px;
+    background-color: rgba(136, 136, 136, 0.24);
+}
+
+#header_bar>h1 {
+    margin: 0px;
+    font-weight: bolder;
+    color: #fff;
+    padding: 5px;
+    padding-left: 20px;
+    font-family: 'Zen Dots', cursive;
+    font-variant: small-caps !important;
+}

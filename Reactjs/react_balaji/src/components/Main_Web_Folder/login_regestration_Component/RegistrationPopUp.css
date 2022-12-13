@@ -1,0 +1,30 @@
+#registration_card {
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px 5px #463737;
+}
+
+#registration_card>h1 {
+    display: inline;
+}
+
+#registration_card>button {
+    position: relative;
+    left: 529px;
+    bottom: 15px;
+    border: none;
+    background-color: inherit;
+    height: 30px;
+    width: 30px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+#registration_card>button:hover {
+    background-color: #696969;
+    color: aliceblue;
+}
+
+input#firstName {
+    margin: 0px 10px 0px 0px;
+}

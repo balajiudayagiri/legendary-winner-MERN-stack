@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap');
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+
+}
+
+* {
+    font-family: 'Manrope', sans-serif;
+}
+
+div#root {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    background-image: url('./images/background-image-fackstore-login.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1#greeting_homePage {
+    color: #fff;
+    text-align: center;
+}
