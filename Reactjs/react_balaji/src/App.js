@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
 import { Component } from 'react';
+import FakeStoreFn from './classAssignment/12DEC-fakeStore-fnComponent/FakeStoreFn';
 // import GrandParent from './functional_compunents/ContextAPI/GrandParent';
 // import GrandParent from './components/ContextAPI/GrandParent';
 // import MyRefs from './components/RefComp/MyRefs';
@@ -55,6 +56,7 @@ class App extends Component {
       {/* <MyRefs /> */}
       {/* <GrandParent /> */}
       {/* <GrandParent /> */}
+      <FakeStoreFn/>
     </>)
   }
 }
