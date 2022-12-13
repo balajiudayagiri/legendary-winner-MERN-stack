@@ -1,7 +1,8 @@
 // import logo from './logo.svg';
-import './App.css';
-import { Component } from 'react';
-import FakeStoreFn from './classAssignment/12DEC-fakeStore-fnComponent/FakeStoreFn';
+import "./App.css";
+import { Component } from "react";
+import TODOApp from "./classAssignment/20DEC_TODO_fn/TODOApp";
+// import FakeStoreFn from "./classAssignment/12DEC-fakeStore-fnComponent/FakeStoreFn";
 // import GrandParent from './functional_compunents/ContextAPI/GrandParent';
 // import GrandParent from './components/ContextAPI/GrandParent';
 // import MyRefs from './components/RefComp/MyRefs';
@@ -29,35 +30,37 @@ import FakeStoreFn from './classAssignment/12DEC-fakeStore-fnComponent/FakeStore
 // import Greeting from './components/class_components_props/greeting';
 // import Greetings from './components/funtional_components_props/hello';
 
-
 class App extends Component {
   render() {
-    return (<>
-      {/* <Header /> */}
-      {/* <ProductPage /> */}
-      {/* <Greeting name='balaji' value={1997} /> */}
-      {/* <Greetings name='Udayagiri' /> */}
-      {/* <Practice /> */}
-      {/* <Clock data={[1, 2, 3, 4]} /> */}
-      {/* <BodyLifecycle name="hello" /> */}
-      {/* <Demo data={[1, 2, 3, 4, 5, 6, 7]} /> */}
-      {/* <Component1 value={100} /> */}
-      {/* <LoginComponent /> */}
-      {/* <Parent /> */}
-      {/* <ParentComp /> */}
-      {/* <Parent /> */}
-      {/* <Facstore /> */}
-      {/* <Timer /> */}
-      {/* <TableData /> */}
-      {/* <TableData /> */}
-      {/* <Reqres /> */}
-      {/* <HOC /> */}
-      {/* <BodyPortal /> */}
-      {/* <MyRefs /> */}
-      {/* <GrandParent /> */}
-      {/* <GrandParent /> */}
-      <FakeStoreFn/>
-    </>)
+    return (
+      <>
+        {/* <Header /> */}
+        {/* <ProductPage /> */}
+        {/* <Greeting name='balaji' value={1997} /> */}
+        {/* <Greetings name='Udayagiri' /> */}
+        {/* <Practice /> */}
+        {/* <Clock data={[1, 2, 3, 4]} /> */}
+        {/* <BodyLifecycle name="hello" /> */}
+        {/* <Demo data={[1, 2, 3, 4, 5, 6, 7]} /> */}
+        {/* <Component1 value={100} /> */}
+        {/* <LoginComponent /> */}
+        {/* <Parent /> */}
+        {/* <ParentComp /> */}
+        {/* <Parent /> */}
+        {/* <Facstore /> */}
+        {/* <Timer /> */}
+        {/* <TableData /> */}
+        {/* <TableData /> */}
+        {/* <Reqres /> */}
+        {/* <HOC /> */}
+        {/* <BodyPortal /> */}
+        {/* <MyRefs /> */}
+        {/* <GrandParent /> */}
+        {/* <GrandParent /> */}
+        {/* <FakeStoreFn/> */}
+        <TODOApp />
+      </>
+    );
   }
 }
 
