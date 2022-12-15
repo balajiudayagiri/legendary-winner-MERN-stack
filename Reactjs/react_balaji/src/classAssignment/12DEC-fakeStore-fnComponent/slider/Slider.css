@@ -1,0 +1,40 @@
+div#filter {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.middle {
+    position: relative;
+    width: 50%;
+    max-width: 500px;
+}
+
+.slider {
+    position: relative;
+    z-index: 1;
+    height: 10px;
+    margin: 0 15px;
+}
+
+input[type=range] {
+    position: absolute;
+    pointer-events: none;
+    z-index: 2;
+    height: 10px;
+    width: 100%;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    pointer-events: all;
+    width: 30px;
+    height: 30px;
+    border-radius: 0;
+    border: 0 none;
+    background-color: red;
+}
+
+#filter>h4 {
+    position: relative;
+    /* left: 25px; */
+}

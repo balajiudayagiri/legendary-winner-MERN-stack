@@ -1,47 +1,77 @@
 import React, { useEffect, useState } from "react";
 import "./FakeStoreFn.css";
+import "./slider/Slider.css";
 
 export default function FakeStoreFn() {
   const [data, setData] = useState([]);
   const [selectedData, setSelectedData] = useState([]);
+  const [rangeValue, setRangeValue] = useState({ left: 0, right: 1000 });
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())
       .then((res) => setData(res));
   }, []);
-  const handleOnclickFromSelectedProduct = (item) => {
-    setSelectedData(item);
-  };
-  const handleBackButton = () => {
-    setSelectedData("");
-  };
+
+  const handleOnclickFromSelectedProduct = (item) => setSelectedData(item);
+  const handleBackButton = () => setSelectedData([]);
   return (
     <>
-      <h1>FackStore</h1>
-      {/* prise range filter Input Range with two sliders*/}
+      <h1>FakeStore</h1>
       <div id="filter">
-        <div id="slider">
-          <input type="range" />
-          <input type="range" />
+        <div className="middle">
+          <div className="multi-range-slider">
+            <input
+              type="range"
+              id="input-left"
+              min="0"
+              max="1000"
+              value={rangeValue.left}
+              onChange={(e) =>
+                setRangeValue({
+                  left: parseInt(e.target.value),
+                  right: rangeValue.right,
+                })
+              }
+            />
+            <input
+              type="range"
+              id="input-right"
+              min="0"
+              max="1000"
+              value={rangeValue.right}
+              onChange={(e) =>
+                setRangeValue({
+                  left: rangeValue.left,
+                  right: parseInt(e.target.value),
+                })
+              }
+            />
+          </div>
         </div>
+        <h4>{`Price Range ${rangeValue.left} - ${rangeValue.right}`}</h4>
       </div>
       {selectedData.length === 0 ? (
         <div id="productPage">
-          {data.map((item, index) => (
-            <div
-              key={index}
-              className="product_div"
-              onClick={() => handleOnclickFromSelectedProduct(item)}
-            >
-              <img
-                src={item.image}
-                alt="product_image"
-                style={{ height: "100px", width: "100px" }}
-              />
-              <h4>{item.title}</h4>
-              <p>{`$ ${item.price}`}</p>
-            </div>
-          ))}
+          {data
+            .filter(
+              (item) =>
+                item.price >= rangeValue.left && item.price <= rangeValue.right
+            )
+            .map((item, index) => (
+              <div
+                key={index}
+                className="product_div"
+                onClick={() => handleOnclickFromSelectedProduct(item)}
+              >
+                <img
+                  src={item.image}
+                  alt="product_image"
+                  style={{ height: "100px", width: "100px" }}
+                />
+                <h4>{item.title}</h4>
+                <p>{`$ ${item.price}`}</p>
+              </div>
+            ))}
         </div>
       ) : (
         <div className="product_div_view">

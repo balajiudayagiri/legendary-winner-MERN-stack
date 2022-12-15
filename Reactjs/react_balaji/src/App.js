@@ -57,7 +57,7 @@ class App extends Component {
         {/* <MyRefs /> */}
         {/* <GrandParent /> */}
         {/* <GrandParent /> */}
-        <FakeStoreFn/>
+        <FakeStoreFn />
         {/* <TODOApp /> */}
       </>
     );

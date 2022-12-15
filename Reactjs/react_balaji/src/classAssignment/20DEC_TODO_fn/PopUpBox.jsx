@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./PopUpBox.css";
 
 export default function PopUpBox(props) {
