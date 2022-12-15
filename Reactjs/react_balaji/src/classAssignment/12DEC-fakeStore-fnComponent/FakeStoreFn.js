@@ -18,6 +18,13 @@ export default function FakeStoreFn() {
   return (
     <>
       <h1>FackStore</h1>
+      {/* prise range filter Input Range with two sliders*/}
+      <div id="filter">
+        <div id="slider">
+          <input type="range" />
+          <input type="range" />
+        </div>
+      </div>
       {selectedData.length === 0 ? (
         <div id="productPage">
           {data.map((item, index) => (

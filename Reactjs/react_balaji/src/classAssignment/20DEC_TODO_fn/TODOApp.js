@@ -9,19 +9,12 @@ export default function TODOApp() {
   const handleClose = (closeData) => {
     setPopUp(closeData);
   };
+  // console.log(input);
   const handleButtonFromHeader = (data) => {
     switch (data) {
       case "addtodo":
-        console.log(data, "handleButtonFromHeader switch 1");
         setPopUp(
-          <PopUpBox handleClose={(closeData) => handleClose(closeData)}>
-            <h3>Enter your TODO here to add into the TODO list</h3>
-            <input type="text" placeholder="Enter your TODO" />
-            <div>
-              <button>AddTODO</button>
-              <button>Cancel</button>
-            </div>
-          </PopUpBox>
+          <PopUpBox handleClose={(closeData) => handleClose(closeData)} />
         );
         break;
       case "status":

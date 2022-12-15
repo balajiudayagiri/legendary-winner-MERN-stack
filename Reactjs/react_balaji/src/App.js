@@ -1,8 +1,8 @@
 // import logo from './logo.svg';
 import "./App.css";
 import { Component } from "react";
-import TODOApp from "./classAssignment/20DEC_TODO_fn/TODOApp";
-// import FakeStoreFn from "./classAssignment/12DEC-fakeStore-fnComponent/FakeStoreFn";
+// import TODOApp from "./classAssignment/20DEC_TODO_fn/TODOApp";
+import FakeStoreFn from "./classAssignment/12DEC-fakeStore-fnComponent/FakeStoreFn";
 // import GrandParent from './functional_compunents/ContextAPI/GrandParent';
 // import GrandParent from './components/ContextAPI/GrandParent';
 // import MyRefs from './components/RefComp/MyRefs';
@@ -57,8 +57,8 @@ class App extends Component {
         {/* <MyRefs /> */}
         {/* <GrandParent /> */}
         {/* <GrandParent /> */}
-        {/* <FakeStoreFn/> */}
-        <TODOApp />
+        <FakeStoreFn/>
+        {/* <TODOApp /> */}
       </>
     );
   }
