@@ -9,3 +9,115 @@
     position: relative;
     padding: 30px;
 }
+
+#todo_body>div {
+
+    border-radius: 5px;
+}
+
+#todo_body>div>div.list_itemData {
+    border: 0.5px solid #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+div#todo_data_all {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+}
+
+div#todo_data_all>div {
+    background-color: rgb(48, 48, 48);
+    width: 400px;
+    height: 440px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#todo_data_all>div>h1 {
+    margin: 0px;
+
+}
+
+#root>div.todoList_home {
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: rgb(48, 48, 48);
+    padding: 25px 25px 0px 25px;
+    height: 470px;
+}
+
+#root>div.todoList_home>h1 {
+    margin: 0px;
+}
+
+#todo_list_data_home,
+/* STATUS */
+#todo_data_all>div.progressList>div,
+#todo_data_all>div.reviewList>div,
+#todo_data_all>div.completeList>div {
+    border: 0.5px solid rgb(71, 71, 71);
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#todo_list_data_home>h3 {
+    margin: 10px;
+}
+
+#todo_list_data_home>button,
+/* STATUS */
+#todo_data_all>div.progressList>div>button,
+#todo_data_all>div.reviewList>div>button,
+#todo_data_all>div.completeList>div>button {
+    border-style: none;
+    background-color: inherit;
+    color: #fff;
+    margin-right: 20px;
+    font-weight: bolder;
+    height: 30px;
+    width: 100px;
+    border-radius: 40px;
+}
+
+#todo_list_data_home>button:hover {
+    color: greenyellow;
+    background-color: rgba(172, 255, 47, 0.267);
+}
+
+/* STATUS */
+#todo_data_all>div.progressList>div>button {
+    width: 30px;
+}
+
+#todo_data_all>div.reviewList>div>button {
+    width: 120px;
+}
+
+#todo_data_all>div.progressList>div>button:hover {
+    color: rgb(72, 255, 0);
+    background-color: rgba(30, 255, 0, 0.267);
+}
+
+#todo_data_all>div.reviewList>div>button:hover {
+    color: rgb(255, 153, 0);
+    background-color: rgba(255, 217, 0, 0.267);
+}
+
+#todo_data_all>div.completeList>div>button:hover {
+    color: rgb(255, 0, 0);
+    background-color: rgba(255, 0, 0, 0.267);
+}
+
+#root>button.back_btn {
+    height: 30px;
+    width: 140px;
+}
