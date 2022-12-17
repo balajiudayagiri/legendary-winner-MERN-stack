@@ -29,6 +29,10 @@ export default function TODOApp() {
   const handleDeleteFormComplete = (i) => {
     setComplete(complete.filter((item) => i !== item));
   };
+  const handleRestartTheTask = (i) => {
+    setReview(review.filter((item) => i !== item));
+    setTodo([...todo, i]);
+  };
   const handleButtonFromHeader = (data) => {
     switch (data) {
       case "addtodo":
@@ -81,18 +85,23 @@ export default function TODOApp() {
             <div className="reviewList">
               <h1>Review</h1>
               {review.map((item, index) => (
-                <div className="review_list_data">
-                  <h3>{item}</h3>
-                  <button onClick={() => handleMoveToComplete(item)}>
-                    Review the task
+                <>
+                  <div className="review_list_data" key={index}>
+                    <h3>{item}</h3>
+                    <button onClick={() => handleMoveToComplete(item)}>
+                      Completed
+                    </button>
+                  </div>
+                  <button onClick={() => handleRestartTheTask(item)}>
+                    Restart the task
                   </button>
-                </div>
+                </>
               ))}
             </div>
             <div className="completeList">
               <h1>Complete</h1>
               {complete.map((item, index) => (
-                <div className="complete_list_data">
+                <div className="complete_list_data" key={index}>
                   <h3>{item}</h3>
                   <button onClick={() => handleDeleteFormComplete(item)}>
                     delete

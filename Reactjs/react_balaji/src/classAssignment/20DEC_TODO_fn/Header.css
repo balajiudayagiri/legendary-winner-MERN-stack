@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 body {
     background-color: rgb(19, 19, 19);
@@ -10,7 +10,7 @@ body {
     display: flex;
     align-items: center;
     background-color: rgb(48, 48, 48);
-    padding: 10px;
+    padding: 0px 10px;
     border-radius: 5px;
 }
 
@@ -18,7 +18,7 @@ body {
     margin: 5px;
     margin-right: 60%;
     font-size: xxx-large;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Pacifico', cursive;
 }
 
 #root>header>button {

@@ -26,7 +26,7 @@
 div#todo_data_all {
     display: flex;
     justify-content: space-between;
-    margin: 20px 0px;
+    /* margin: 20px 0px; */
 }
 
 div#todo_data_all>div {
@@ -35,6 +35,7 @@ div#todo_data_all>div {
     height: 440px;
     padding: 10px;
     border-radius: 5px;
+    overflow-y: scroll;
 }
 
 #todo_data_all>div>h1 {
@@ -47,7 +48,7 @@ div#todo_data_all>div {
     border-radius: 5px;
     background-color: rgb(48, 48, 48);
     padding: 25px 25px 0px 25px;
-    height: 470px;
+    height: 460px;
 }
 
 #root>div.todoList_home>h1 {
@@ -67,6 +68,7 @@ div#todo_data_all>div {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
 }
 
 #todo_list_data_home>h3 {
@@ -77,7 +79,8 @@ div#todo_data_all>div {
 /* STATUS */
 #todo_data_all>div.progressList>div>button,
 #todo_data_all>div.reviewList>div>button,
-#todo_data_all>div.completeList>div>button {
+#todo_data_all>div.completeList>div>button,
+#todo_data_all>div.reviewList>button {
     border-style: none;
     background-color: inherit;
     color: #fff;
@@ -99,7 +102,7 @@ div#todo_data_all>div {
 }
 
 #todo_data_all>div.reviewList>div>button {
-    width: 120px;
+    width: 97px !important;
 }
 
 #todo_data_all>div.progressList>div>button:hover {
@@ -108,8 +111,8 @@ div#todo_data_all>div {
 }
 
 #todo_data_all>div.reviewList>div>button:hover {
-    color: rgb(255, 153, 0);
-    background-color: rgba(255, 217, 0, 0.267);
+    color: rgb(72, 255, 0);
+    background-color: rgba(30, 255, 0, 0.267);
 }
 
 #todo_data_all>div.completeList>div>button:hover {
@@ -117,7 +120,70 @@ div#todo_data_all>div {
     background-color: rgba(255, 0, 0, 0.267);
 }
 
+#todo_data_all>div.reviewList>button:hover {
+    color: rgb(255, 153, 0);
+    background-color: rgba(255, 217, 0, 0.267);
+}
+
+#todo_data_all>div.reviewList>button {
+    width: 120px;
+}
+
 #root>button.back_btn {
     height: 30px;
-    width: 140px;
+    width: 80px;
+}
+
+/* status back button */
+#root>button {
+    background-color: inherit;
+    color: #fff;
+    border: 1px solid;
+    margin: 10px;
+}
+
+#root>button:hover {
+    background-color: rgba(255, 255, 255, 0.329);
+    border: none;
+}
+
+/* css for text wrap */
+#todo_data_all>div {
+    overflow-wrap: anywhere;
+}
+
+#todo_data_all>div>div>h3 {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* scroll for the todoList first list */
+#root>div {
+    overflow-y: scroll;
+}
+
+div#todo_data_all>div::-webkit-scrollbar,
+#root>div::-webkit-scrollbar {
+    background-color: rgb(71, 71, 71);
+    width: 5px;
+}
+
+div#todo_data_all>div::-webkit-scrollbar:hover,
+#root>div::-webkit-scrollbar:hover {
+    width: 10px;
+}
+
+div#todo_data_all>div::-webkit-scrollbar-track,
+#root>div::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+div#todo_data_all>div::-webkit-scrollbar-thumb,
+#root>div::-webkit-scrollbar-thumb {
+    background-color: rgb(112, 112, 112);
+    border-radius: 5px;
+}
+
+#todo_data_all>div>div>h3 {
+    width: 320px;
 }
