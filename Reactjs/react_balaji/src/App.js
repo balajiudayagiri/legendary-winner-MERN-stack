@@ -1,7 +1,8 @@
 // import logo from './logo.svg';
 import "./App.css";
 import { Component } from "react";
-import TODOApp from "./classAssignment/20DEC_TODO_fn/TODOApp";
+import PersonDetails from "./classAssignment/20DEC-personDetails_fn/PersonDetails";
+// import TODOApp from "./classAssignment/20DEC_TODO_fn/TODOApp";
 // import FakeStoreFn from "./classAssignment/12DEC-fakeStore-fnComponent/FakeStoreFn";
 // import GrandParent from './functional_compunents/ContextAPI/GrandParent';
 // import GrandParent from './components/ContextAPI/GrandParent';
@@ -58,7 +59,8 @@ class App extends Component {
         {/* <GrandParent /> */}
         {/* <GrandParent /> */}
         {/* <FakeStoreFn /> */}
-        <TODOApp />
+        {/* <TODOApp /> */}
+        <PersonDetails />
       </>
     );
   }
