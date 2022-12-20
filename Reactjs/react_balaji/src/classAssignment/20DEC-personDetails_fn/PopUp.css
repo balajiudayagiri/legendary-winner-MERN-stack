@@ -10,6 +10,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 2;
 }
 
 #popup_card {
@@ -17,7 +18,7 @@
     flex-direction: column;
     gap: 10px;
     width: 600px;
-    height: 250px;
+    height: 300px;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0px 0px 10px 0px grey;
@@ -56,3 +57,5 @@
     height: 32px;
     margin: 10px;
 }
+
+#table_employee_data>tr>td:nth-child(7) {}

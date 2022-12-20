@@ -1,18 +1,34 @@
 div#employee_details_div {
     margin: 0px 20px 20px 20px;
-    padding: 10px;
+    padding: 0px 20px 20px 20px;
     background-color: #fff;
-    height: 469px;
+    height: 469px !important;
     box-shadow: 0px 0px 6px 0px grey;
     border-radius: 5px;
 
     position: relative;
     top: 22px;
     height: 488px;
+    overflow-y: scroll;
+}
+
+div#employee_details_div::-webkit-scrollbar {
+    background-color: rgb(194, 194, 194);
+    width: 5px;
+}
+
+div#employee_details_div::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+div#employee_details_div::-webkit-scrollbar-thumb {
+    background-color: rgb(218, 218, 218);
+    border-radius: 5px;
 }
 
 #employee_details_div>h1 {
     margin: 0px;
+    padding-top: 20px;
 }
 
 /* table css */
@@ -21,10 +37,86 @@ table {
 }
 
 th {
-    background-color: gray;
+    background-color: rgba(199, 198, 198, 0.452);
+    border: 0.3px solid rgb(185, 185, 185);
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
 }
 
-td {
-    /* border-bottom: 1px solid gray; */
-    /* border-right: 1px solid gray; */
+thead {
+    height: 40px;
+}
+
+#table_employee_data>thead>th:nth-child(2),
+#table_employee_data>thead>th:nth-child(3) {
+    width: 180px;
+}
+
+#table_employee_data>thead>th:nth-child(7) {
+    width: 320px;
+}
+
+#table_employee_data>thead:nth-child(1)>th:nth-child(5) {
+    width: 250px;
+}
+
+#table_employee_data>thead>th:nth-child(4) {
+    width: 226px;
+}
+
+#table_employee_data>thead>th:nth-child(8) {
+    width: 87px;
+    border: none;
+}
+
+#table_employee_data>thead>th:nth-child(4) {
+    width: 50px;
+}
+
+#table_employee_data>tr>td {
+    text-align: center;
+}
+
+#table_employee_data>tr>td>button {
+    background-color: #fff;
+    border: none;
+    font-size: larger;
+}
+
+#table_employee_data>tr>td:nth-child(8)>button:nth-child(1):hover {
+    color: rgb(2, 138, 2);
+    background-color: rgba(43, 255, 0, 0.411);
+    border-radius: 50%;
+
+}
+
+#table_employee_data>tr>td:nth-child(8)>button:nth-child(2):hover {
+    color: rgb(138, 2, 2);
+    background-color: rgba(255, 0, 0, 0.411);
+    border-radius: 50%;
+}
+
+#table_employee_data>tr>td {
+    height: 40px;
+    border-bottom: 1px solid rgba(184, 184, 184, 0.568);
+    border-right: 1px solid rgba(184, 184, 184, 0.568);
+}
+
+/* #table_employee_data>tr:nth-child(2)>td */
+#table_employee_data>tr>td:nth-child(8) {
+    border-right: none;
+}
+
+/* body title sticky */
+#employee_details_div>h1 {
+    position: fixed;
+    z-index: 1;
+    width: 1281px;
+    background-color: #fff;
+}
+
+div#table_emp_data_div {
+    position: relative;
+    top: 82px;
 }

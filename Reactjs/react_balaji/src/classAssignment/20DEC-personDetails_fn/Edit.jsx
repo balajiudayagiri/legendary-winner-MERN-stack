@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./PopUp.css";
+import "./Edit.css";
 
-export default function PopUp(props) {
+export default function Edit(props) {
   const [details, setDetails] = useState({
     firstName: "",
     lastName: "",
@@ -13,11 +13,11 @@ export default function PopUp(props) {
   const handleInputData = (e) => {
     setDetails({ ...details, [e.target.name]: e.target.value });
   };
-
   return (
-    <div id="popup_bg">
-      <div id="popup_card">
-        <button onClick={() => props.handlePopUpState(false)}>&#10006;</button>
+    <div id="edit_bg">
+      <div id="edit_popUp">
+        <h1>Edit</h1>
+        <button onClick={() => props.handleEditPopUp(false)}>&#10006;</button>
         <span className="popup_name_input">
           <input
             type="text"
@@ -60,12 +60,12 @@ export default function PopUp(props) {
           <button
             onClick={() => {
               props.handleAddDetails(details);
-              props.handlePopUpState(false);
+              props.handleEditPopUp(false);
             }}
           >
-            Add Employee details
+            Edit Employee details
           </button>
-          <button onClick={() => props.handlePopUpState(false)}>Cancel</button>
+          <button onClick={() => props.handleEditPopUp(false)}>Cancel</button>
         </span>
       </div>
     </div>
