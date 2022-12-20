@@ -3,20 +3,16 @@ import Body from "./Body";
 import Header from "./Header";
 import PopUp from "./PopUp";
 import "./PersonDetails.css";
-// import Delete from "./Delete";
 import Edit from "./Edit";
 
 export default function PersonDetails() {
   const [popUp, setPopUp] = useState(false);
   const [editPopUp, setEditPopUp] = useState(false);
-  const [details, setDetails] = useState([
-    { firstName: "", lastName: "", age: "", email: "", phNo: "", address: "" },
-  ]);
+  const [details, setDetails] = useState([]);
+  const [dataForEdit, setDataForEdit] = useState();
+  // const [editedData, setEditedData] = useState();
   const handleDeletePopUp = (itemfromChild) => {
     setDetails(details.filter((item) => item !== itemfromChild));
-  };
-  const handleEditPopUp = (itemfromChild, i) => {
-    console.log(itemfromChild, i);
   };
   return (
     <>
@@ -28,7 +24,7 @@ export default function PersonDetails() {
         }}
         handleEditPopUp={(s, item, i) => {
           setEditPopUp(s);
-          handleEditPopUp(item, i);
+          setDataForEdit({ data: item, index: i });
         }}
       />
       {popUp ? (
@@ -37,7 +33,20 @@ export default function PersonDetails() {
           handleAddDetails={(data) => setDetails([...details, data])}
         />
       ) : null}
-      {editPopUp ? <Edit handleEditPopUp={(s) => setEditPopUp(s)} /> : null}
+      {editPopUp ? (
+        <Edit
+          handleEditPopUp={(s) => setEditPopUp(s)}
+          handleEditDetails={(s) => {
+            details.map((item, index) => {
+              if (index === dataForEdit.index) {
+                details[index] = s;
+              }
+              return null;
+            });
+          }}
+          dataForEdit={dataForEdit.data}
+        />
+      ) : null}
     </>
   );
 }
