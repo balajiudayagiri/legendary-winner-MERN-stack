@@ -10,9 +10,8 @@ export default function PersonDetails() {
   const [editPopUp, setEditPopUp] = useState(false);
   const [details, setDetails] = useState([]);
   const [dataForEdit, setDataForEdit] = useState();
-  const handleDeletePopUp = (itemfromChild) => {
-    setDetails(details.filter((item) => item !== itemfromChild));
-  };
+  const handleDeletePopUp = (itemfromChild) =>
+    setDetails(details.filter((i) => i !== itemfromChild));
   return (
     <>
       <Header handlePopUpState={(s) => setPopUp(s)} />
@@ -25,8 +24,6 @@ export default function PersonDetails() {
           setEditPopUp(s);
           setDataForEdit({ data: item, index: i });
         }}
-
-        // search word
       />
       {popUp ? (
         <PopUp

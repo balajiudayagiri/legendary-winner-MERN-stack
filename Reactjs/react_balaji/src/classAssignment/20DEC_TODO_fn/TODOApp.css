@@ -73,9 +73,14 @@ div#todo_data_all>div {
 
 #todo_list_data_home>h3 {
     margin: 10px;
+    overflow-wrap: anywhere;
 }
 
-#todo_list_data_home>button,
+#todo_list_data_home>span {
+    display: flex;
+}
+
+#todo_list_data_home>span>button,
 /* STATUS */
 #todo_data_all>div.progressList>div>button,
 #todo_data_all>div.reviewList>div>button,
@@ -91,7 +96,7 @@ div#todo_data_all>div {
     border-radius: 40px;
 }
 
-#todo_list_data_home>button:hover {
+#todo_list_data_home>span>button:hover {
     color: greenyellow;
     background-color: rgba(172, 255, 47, 0.267);
 }
@@ -155,6 +160,10 @@ div#todo_data_all>div {
 #todo_data_all>div>div>h3 {
     margin-left: 10px;
     margin-right: 10px;
+}
+
+#todo_list_data_home>span>button:nth-child(1) {
+    width: 32px;
 }
 
 /* scroll for the todoList first list */

@@ -13,7 +13,7 @@ export default function Header(props) {
           placeholder="Search details by Registered name or Id"
           onChange={(e) => setSearch(e.target.value)}
         />
-        <button onClick={""}>Search</button>
+        <button onClick={() => props.handleSearch(search)}>Search</button>
       </div>
       <button onClick={() => props.handlePopUpState(true)}>
         &#10010; Add Employee Details

@@ -1,16 +1,12 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 import "./Edit.css";
 
 export default function Edit(props) {
-  const { firstName, lastName, age, email, phNo, address } = props.dataForEdit;
-  const [details, setDetails] = useState({
-    firstName: firstName,
-    lastName: lastName,
-    age: age,
-    email: email,
-    phNo: phNo,
-    address: address,
-  });
+  const [details, setDetails] = useState({});
+  useEffect(() => {
+    setDetails(props.dataForEdit);
+  }, [props.dataForEdit]);
   const handleInputData = (e) => {
     setDetails({ ...details, [e.target.name]: e.target.value });
   };
@@ -70,8 +66,7 @@ export default function Edit(props) {
             onClick={() => {
               props.handleEditDetails(details);
               props.handleEditPopUp(false);
-            }}
-          >
+            }}>
             Edit Employee details
           </button>
           <button onClick={() => props.handleEditPopUp(false)}>Cancel</button>

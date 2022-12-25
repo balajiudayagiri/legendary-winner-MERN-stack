@@ -11,7 +11,6 @@ export default function Body(props) {
       item.phNo !== "" &&
       item.address !== ""
   );
-  // console.log(employeeDetails);
   return (
     <div id="employee_details_div">
       <h1>Details</h1>
@@ -25,7 +24,7 @@ export default function Body(props) {
             <th>E-Mail</th>
             <th>Mobile Number</th>
             <th>Address</th>
-            <th></th>
+            <th>&#9998;/&#10006;</th>
           </thead>
           {employeeDetails.map((item, index) => (
             <tr>
@@ -38,8 +37,7 @@ export default function Body(props) {
               <td>{item.address}</td>
               <td>
                 <button
-                  onClick={() => props.handleEditPopUp(true, item, index)}
-                >
+                  onClick={() => props.handleEditPopUp(true, item, index)}>
                   &#9998;
                 </button>
                 <button onClick={() => props.handleDeletePopUp(item)}>

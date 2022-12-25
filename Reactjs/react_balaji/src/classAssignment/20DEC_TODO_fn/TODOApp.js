@@ -6,64 +6,60 @@ import "./TODOApp.css";
 export default function TODOApp() {
   const [popUp, setPopUp] = useState();
   const [status, setStatus] = useState(true);
-  const [todo, setTodo] = useState([]); //object used to store the data from child
+  const [todo, setTodo] = useState([]);
   const [progress, setProgress] = useState([]);
   const [review, setReview] = useState([]);
   const [complete, setComplete] = useState([]);
-  const handleClose = (closeData) => setPopUp(closeData); //Close Function
-  const handleInputData = (data) => {
-    setTodo([...todo, data]);
-  };
-  const handleMoveToProgress = (i) => {
-    setTodo(todo.filter((item) => i !== item));
-    setProgress([...progress, i]);
-  };
-  const handleMoveToReview = (i) => {
-    setProgress(progress.filter((item) => i !== item));
-    setReview([...review, i]);
-  };
-  const handleMoveToComplete = (i) => {
-    setReview(review.filter((item) => i !== item));
-    setComplete([...complete, i]);
-  };
-  const handleDeleteFormComplete = (i) => {
-    setComplete(complete.filter((item) => i !== item));
-  };
-  const handleRestartTheTask = (i) => {
-    setReview(review.filter((item) => i !== item));
-    setTodo([...todo, i]);
-  };
-  const handleButtonFromHeader = (data) => {
-    switch (data) {
-      case "addtodo":
-        setPopUp(
-          <PopUpBox
-            handleClose={(closeData) => handleClose(closeData)}
-            handleInputData={handleInputData}
-          />
-        );
-        break;
-      case "status":
-        setStatus(false);
-        break;
-      default:
-        break;
-    }
-  };
+  const [editPop, setEditPop] = useState(false);
+  const [editData, setEditData] = useState({});
+
   return (
     <>
-      <Header handleButtonFromHeader={(data) => handleButtonFromHeader(data)} />
+      <Header
+        handleButtonFromHeader={(data) => {
+          switch (data) {
+            case "addtodo":
+              setPopUp(
+                <PopUpBox
+                  handleClose={(closeData) => setPopUp(closeData)}
+                  handleInputData={(data) => setTodo([...todo, data])}
+                />
+              );
+              break;
+            case "status":
+              setStatus(false);
+              break;
+            default:
+              break;
+          }
+        }}
+      />
       {status ? (
         <div className="todoList_home">
           <h1 onClick={() => setStatus(true)}>TODO List</h1>
-          {todo.map((item, index) => (
-            <div id="todo_list_data_home" key={index}>
-              <h3>{item}</h3>
-              <button onClick={() => handleMoveToProgress(item)}>
-                Start the task
-              </button>
-            </div>
-          ))}
+          {todo
+            .filter((item) => item !== undefined)
+            .map((item, index) => (
+              <div id="todo_list_data_home" key={index}>
+                <h3>{item}</h3>
+                <span>
+                  <button
+                    onClick={() => {
+                      setEditPop(true);
+                      setEditData({ item: item, index: index });
+                    }}>
+                    &#9998;
+                  </button>
+                  <button
+                    onClick={() => {
+                      setTodo(todo.filter((i) => item !== i));
+                      setProgress([...progress, item]);
+                    }}>
+                    Start the task
+                  </button>
+                </span>
+              </div>
+            ))}
         </div>
       ) : (
         <>
@@ -76,7 +72,11 @@ export default function TODOApp() {
               {progress.map((item, index) => (
                 <div className="progress_list_data" key={index}>
                   <h3>{item}</h3>
-                  <button onClick={() => handleMoveToReview(item)}>
+                  <button
+                    onClick={() => {
+                      setProgress(progress.filter((i) => item !== i));
+                      setReview([...review, item]);
+                    }}>
                     &#10004;
                   </button>
                 </div>
@@ -88,11 +88,19 @@ export default function TODOApp() {
                 <>
                   <div className="review_list_data" key={index}>
                     <h3>{item}</h3>
-                    <button onClick={() => handleMoveToComplete(item)}>
+                    <button
+                      onClick={() => {
+                        setReview(review.filter((i) => item !== i));
+                        setComplete([...complete, item]);
+                      }}>
                       Completed
                     </button>
                   </div>
-                  <button onClick={() => handleRestartTheTask(item)}>
+                  <button
+                    onClick={() => {
+                      setReview(review.filter((i) => item !== i));
+                      setTodo([...todo, item]);
+                    }}>
                     Restart the task
                   </button>
                 </>
@@ -103,7 +111,10 @@ export default function TODOApp() {
               {complete.map((item, index) => (
                 <div className="complete_list_data" key={index}>
                   <h3>{item}</h3>
-                  <button onClick={() => handleDeleteFormComplete(item)}>
+                  <button
+                    onClick={() =>
+                      setComplete(complete.filter((i) => item !== i))
+                    }>
                     delete
                   </button>
                 </div>
@@ -112,8 +123,40 @@ export default function TODOApp() {
           </div>
         </>
       )}
-
       {popUp}
+      {editPop ? (
+        <>
+          <div id="popup_bg">
+            <div id="popup_box">
+              <button onClick={() => setEditPop(false)}>&#x2716;</button>
+              <br />
+              <h3>Edit your TODO here </h3>
+              <input
+                type="text"
+                value={editData.item}
+                onChange={(e) =>
+                  setEditData({ ...editData, item: e.target.value })
+                }
+              />
+              <div>
+                <button
+                  onClick={() => {
+                    todo.map((item, index) => {
+                      if (index === editData.index) {
+                        todo[index] = editData.item;
+                      }
+                      return null;
+                    });
+                    setEditPop(false);
+                  }}>
+                  save
+                </button>
+                <button onClick={() => setEditPop(false)}>Cancel</button>
+              </div>
+            </div>
+          </div>
+        </>
+      ) : null}
     </>
   );
 }

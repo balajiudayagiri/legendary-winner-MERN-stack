@@ -23,8 +23,7 @@ export default function PopUpBox(props) {
               onClick={() => {
                 props.handleInputData(input);
                 handleClose(null);
-              }}
-            >
+              }}>
               AddTODO
             </button>
             <button onClick={() => handleClose(null)}>Cancel</button>
