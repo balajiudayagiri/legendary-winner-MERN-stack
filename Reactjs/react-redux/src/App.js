@@ -1,11 +1,11 @@
 import "./App.css";
 import { Provider } from "react-redux";
-import store from "./components/store/Store";
-import CounterApp from "./components/Counter_app/CounterApp";
+import FakeStore from "./componentForRedux/fakeStore/FakeStore";
+import { store } from "./componentForRedux/store/store";
 function App() {
   return (
     <Provider store={store}>
-      <CounterApp />
+      <FakeStore />
     </Provider>
   );
 }

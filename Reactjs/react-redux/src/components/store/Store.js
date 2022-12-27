@@ -1,14 +1,22 @@
 import { createStore } from "redux";
-const countReducer = (state, action) => {
-  switch (action.type) {
-    case "count":
-      return {
-        counter: state.counter + 1,
-      };
+import { composeWithDevTools } from "redux-devtools-extension";
 
+const countReducer = (state = { fakeData: [] }, action) => {
+  switch (action.type) {
+    // case "inc":
+    //   return {
+    //     ...state,
+    //     counter: state.counter + action.payload,
+    //   };
+    case "fakeData":
+      return {
+        fakeData: action.payload,
+      };
     default:
       return state;
   }
 };
-const store = createStore(countReducer, { counter: 0 });
+
+const store = createStore(countReducer, composeWithDevTools);
+
 export default store;

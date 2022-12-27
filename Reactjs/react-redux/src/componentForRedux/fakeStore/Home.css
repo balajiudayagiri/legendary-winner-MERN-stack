@@ -1,0 +1,21 @@
+div#product_div {
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px;
+    gap: 47px;
+    padding: 10px;
+    overflow-y: scroll;
+    height: 570px;
+}
+
+div#product_div::-webkit-scrollbar {
+    width: 5px;
+}
+
+div#product_div::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+div#product_div::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
