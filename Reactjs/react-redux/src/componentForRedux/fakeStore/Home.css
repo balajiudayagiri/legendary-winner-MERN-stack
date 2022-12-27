@@ -1,10 +1,10 @@
 div#product_div {
     display: grid;
     grid-template-columns: 300px 300px 300px 300px;
-    gap: 47px;
-    padding: 10px;
+    gap: 30px;
+    padding: 25px 35px;
     overflow-y: scroll;
-    height: 570px;
+    height: 540px;
 }
 
 div#product_div::-webkit-scrollbar {
@@ -16,6 +16,5 @@ div#product_div::-webkit-scrollbar-track {
 }
 
 div#product_div::-webkit-scrollbar-thumb {
-    background-color: darkgrey;
-    outline: 1px solid slategrey;
+    background-color: rgb(88, 88, 88);
 }
