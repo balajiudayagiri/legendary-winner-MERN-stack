@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div id="product_div">
       {data.map((item, index) => (
-        <HomeProducts item={item} index={index} />
+        <HomeProducts item={item} key={index} />
       ))}
     </div>
   );
