@@ -1,5 +1,3 @@
-import { fetchFromDummyjson } from "./FetchData";
-
 const initalState = {
   fetchedData: [],
 };
@@ -14,11 +12,3 @@ export const reducer = (state = initalState, action) => {
       return state;
   }
 };
-
-export const fetchAction = (data) => {
-  return {
-    type: "fetch_get",
-    payload: data,
-  };
-};
-fetchAction(fetchFromDummyjson());
