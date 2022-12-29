@@ -1,8 +1,10 @@
 import React from "react";
+import "./common.css";
 import { Link } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
+import Typography from "@mui/material/Typography";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -48,7 +50,15 @@ export default function Header() {
   return (
     <div id="header_div">
       <div>
-        <img src="" />
+        <Link to="/">
+          <Typography
+            variant="h6"
+            noWrap
+            component="div"
+            sx={{ display: { xs: "none", sm: "block" } }}>
+            AwsomeStore
+          </Typography>
+        </Link>
       </div>
       <Search>
         <SearchIconWrapper>
@@ -61,19 +71,16 @@ export default function Header() {
       </Search>
       <div id="header_nav_div">
         <div>
-          <Link to="/">Home</Link>
+          <Link to="/products">Products</Link>
         </div>
         <div>
-          <Link to="/products">Products</Link>
-          <div>
-            <Link to="/about">About</Link>
-          </div>
-          <div>
-            <Link to="/contact-us">ContactUs</Link>
-          </div>
-          <div>
-            <Link to="/login-or-registration">LoginOrRegister</Link>
-          </div>
+          <Link to="/about">About</Link>
+        </div>
+        <div>
+          <Link to="/contact-us">ContactUs</Link>
+        </div>
+        <div>
+          <Link to="/login-or-registration">LoginOrRegister</Link>
         </div>
       </div>
     </div>

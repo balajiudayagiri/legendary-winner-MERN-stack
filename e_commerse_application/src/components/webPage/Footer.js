@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function Footer() {
-  return <div>Footer</div>;
+  return <div>&copy;copyrights, reserved for AwsomeStore.pvt.ltd</div>;
 }

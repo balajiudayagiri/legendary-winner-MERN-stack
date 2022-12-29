@@ -1,0 +1,53 @@
+#body_contains {
+
+    overflow-y: scroll;
+    height: 100%;
+    width: 100%;
+}
+
+#home_div {
+    padding: 10x;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#home_div>h1 {
+    margin: 0px;
+}
+
+#home_div>div {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin: 130px 50px;
+}
+
+#home_div>div>div {
+    position: relative;
+    width: 100%;
+}
+
+#home_div>div>div>img,
+#home_div>div>h1 {
+    position: absolute;
+}
+
+#home_div>div>h1 {
+    left: 500px;
+    top: 297.062;
+    bottom: 200px;
+    top: 300px;
+    font-size: xxx-large;
+}
+
+#home_div>div>div>img:nth-child(1) {
+
+    position: absolute;
+    left: 344px;
+    top: 0px;
+}
+
+#home_div>div>div>img:nth-child(2) {
+    left: 600px;
+}

@@ -1,0 +1,52 @@
+body,
+#root {
+    height: 100vh;
+}
+
+#header_div,
+#header_nav_div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#header_div {
+    background-color: #202124;
+    padding: 5px;
+    color: #fff;
+}
+
+
+#header_div a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#header_nav_div>div {
+    margin: 0px 5px;
+    height: 39px;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+#header_div>div.css-96uuyl>div.MuiInputBase-root.MuiInputBase-colorPrimary.css-1kcggdq-MuiInputBase-root>input {
+    width: 300px;
+}
+
+#header_nav_div>div:hover {
+    background-color: rgba(255, 255, 255, 0.192);
+}
+
+div#body_contains {
+    height: calc(100vh - 15vh)
+}
+
+#root>div:nth-child(3) {
+    height: 46px;
+    background-color: #202124;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}

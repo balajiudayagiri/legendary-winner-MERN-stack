@@ -19,6 +19,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/login-or-registration" element={<LoginOrRegister />} />
+          <Route path="*" element={<h1>Error 404, Failed</h1>} />
         </Routes>
       </div>
       <Footer />
