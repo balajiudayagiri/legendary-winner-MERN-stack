@@ -1,0 +1,51 @@
+#body_contains>div.JoyTabs-root {
+  box-shadow: 0px 0px 5px 0px gray;
+  padding: 10px;
+}
+
+#body_contains>div>div.JoyTabList-root.JoyTabList-vertical.JoyTabList-variantSoft.JoyTabList-colorNeutral.JoyTabList-sizeMd.css-sx3zev-JoyTabList-root {
+  height: 50px;
+  width: 150px;
+  margin: 5px 0px;
+}
+
+button#\:r0\:-T-0:hover,
+button#\:r0\:-T-1:hover,
+button#\:r0\:-T-2:hover {
+  background-color: rgba(211, 211, 211, 0.63);
+}
+
+button#\:r0\:-T-0:focus,
+button#\:r0\:-T-1:focus,
+button#\:r0\:-T-2:focus {
+  background-color: rgba(175, 175, 175, 0.678);
+}
+
+#\:r0\:-P-0,
+#\:r0\:-P-1,
+#\:r0\:-P-2 {
+  border-left: 1px solid rgba(145, 145, 145, 0.452);
+  margin-left: 5px;
+}
+
+button#\:r3\:-T-0:hover,
+button#\:r3\:-T-1:hover,
+button#\:r3\:-T-2:hover {
+  background-color: rgba(211, 211, 211, 0.63);
+}
+
+button#\:r3\:-T-0:focus,
+button#\:r3\:-T-1:focus,
+button#\:r3\:-T-2:focus {
+  background-color: rgba(175, 175, 175, 0.678);
+}
+
+button.submitBtn {
+  background-color: #1d80e2;
+}
+
+button.submitBtn:hover {
+  background-color: #1663af;
+  color: rgb(255, 255, 255);
+  outline: none;
+}

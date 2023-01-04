@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./common.css";
 import { Link } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
 import Typography from "@mui/material/Typography";
+import { Switch } from "@mui/material";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -47,10 +48,15 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function Header() {
+  const [checked, setChecked] = useState();
+  const handleDarkMode = (e) =>
+    e
+      ? document.body.setAttribute("id", "darkTheam")
+      : document.body.removeAttribute("id");
   return (
     <div id="header_div">
       <div>
-        <Link to="/">
+        <Link className="darkTheme_link" to="/">
           <Typography
             variant="h6"
             noWrap
@@ -69,18 +75,33 @@ export default function Header() {
           inputProps={{ "aria-label": "search" }}
         />
       </Search>
-      <div id="header_nav_div">
+      <Switch
+        checked={checked}
+        onChange={(event) => {
+          setChecked(event.target.checked);
+          handleDarkMode(event.target.checked);
+        }}
+      />
+      <div className="header_nav_div">
         <div>
-          <Link to="/products">Products</Link>
+          <Link className="darkTheme_link" to="/products">
+            Products
+          </Link>
         </div>
         <div>
-          <Link to="/about">About</Link>
+          <Link className="darkTheme_link" to="/about">
+            About
+          </Link>
         </div>
         <div>
-          <Link to="/contact-us">ContactUs</Link>
+          <Link className="darkTheme_link" to="/contact-us">
+            ContactUs
+          </Link>
         </div>
         <div>
-          <Link to="/login-or-registration">LoginOrRegister</Link>
+          <Link className="darkTheme_link" to="/login-or-registration">
+            Login
+          </Link>
         </div>
       </div>
     </div>
