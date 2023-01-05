@@ -49,7 +49,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 }));
 
 export default function About() {
-  const data = useSelector((state) => state.fetchedData);
+  const data = useSelector((state) => state.reducer.fetchedData);
   const [expanded, setExpanded] = React.useState("panel1");
 
   const handleChange = (panel) => (event, newExpanded) => {

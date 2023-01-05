@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import "./Body.css";
 import MediaCard from "./MediaCard";
 import imgShopping from "../../image/shopping.png";
@@ -8,7 +8,8 @@ import imgShopping1 from "../../image/shopping1.png";
 import imgShopping2 from "../../image/shopping2.png";
 
 export default function Home() {
-  const data = useSelector((state) => state.fetchedData);
+  const data = useSelector((state) => state.reducer.fetchedData);
+  const dispatch = useDispatch();
   const media_card_data = data
     .filter((item, index) => (index + 1) % 4 === 0)
     .map((item) => {
@@ -18,6 +19,11 @@ export default function Home() {
         context: item.productDetails.Description,
       };
     });
+  useEffect(() => {
+    fetch("https://fakestoreapi.com/products/")
+      .then((res) => res.json())
+      .then((res) => dispatch({ type: "USER_INFO", payload: res }));
+  });
   return (
     <>
       <Box sx={{ width: "100%", maxWidth: 500 }}>

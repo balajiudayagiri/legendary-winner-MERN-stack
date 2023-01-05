@@ -15,7 +15,11 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Backdrop, CircularProgress } from "@mui/material";
 import { Authentication_loginIn_Register } from "../../../services/API";
 
-const theme = createTheme();
+const theme = createTheme({
+  palette: {
+    mode: "light",
+  },
+});
 
 export default function SignUp() {
   const [open, setOpen] = React.useState(false);

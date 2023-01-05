@@ -9,7 +9,8 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
 export default function Products() {
-  const data = useSelector((state) => state.fetchedData);
+  const data = useSelector((state) => state.reducer.fetchedData);
+  const dataFakeStore = useSelector((state) => state.userReducer.userInfo);
 
   return (
     <div id="product_div">

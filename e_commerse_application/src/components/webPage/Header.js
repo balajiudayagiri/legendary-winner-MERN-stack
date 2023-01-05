@@ -6,6 +6,7 @@ import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
 import Typography from "@mui/material/Typography";
 import { Switch } from "@mui/material";
+import { useDispatch, useSelector } from "react-redux";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -49,10 +50,11 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function Header() {
   const [checked, setChecked] = useState();
-  const handleDarkMode = (e) =>
+  const handleDarkMode = (e) => {
     e
       ? document.body.setAttribute("id", "darkTheam")
       : document.body.removeAttribute("id");
+  };
   return (
     <div id="header_div">
       <div>
