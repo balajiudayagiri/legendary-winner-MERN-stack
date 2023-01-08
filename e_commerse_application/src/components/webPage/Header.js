@@ -69,7 +69,6 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 
 export default function Header() {
   const dispatch = useDispatch();
-  // const
   const { userInfo } = useSelector((state) => state.userReducer);
   const [checked, setChecked] = useState();
   const handleDarkMode = (e) => {

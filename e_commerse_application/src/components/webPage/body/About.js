@@ -9,6 +9,7 @@ import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
+import { Link } from "react-router-dom";
 import { Button, CardActionArea, CardActions, Grid } from "@mui/material";
 import { useSelector } from "react-redux";
 
@@ -110,7 +111,8 @@ export default function About() {
             <Typography>
               AwesomeStore understands its shoppers' needs and caters to them
               with choice of apparel, accessories, cosmetics and footwear from
-              over 500 leading Indian and international brands.
+              over 500 leading Indian and international brands. You can check
+              out our sales and our work, <Link to="/sales">here</Link>
             </Typography>
           </AccordionDetails>
         </Accordion>

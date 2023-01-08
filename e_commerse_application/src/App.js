@@ -8,9 +8,7 @@ export default function App() {
   const userInfo = JSON.parse(localStorage.getItem("userInfo"));
   const authenticationToken = localStorage.getItem("authenticationToken");
   useEffect(() => {
-    dispatch(
-      setUserInfo({ ...userInfo, authenticationToken: authenticationToken })
-    );
+    dispatch(setUserInfo({ ...userInfo, token: authenticationToken }));
   });
 
   return <AwesomeStoreMain />;

@@ -21,7 +21,6 @@ export default function StatusAllOver() {
       <Typography variant="h4" gutterBottom>
         Sales across overseas
       </Typography>
-      <Typography variant="h4"></Typography>
       <ReactFC {...chartConfigs} />
     </>
   );
