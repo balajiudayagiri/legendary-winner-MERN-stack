@@ -1,12 +1,22 @@
 import React, { useState } from "react";
-import "./common.css";
 import { Link } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
 import Typography from "@mui/material/Typography";
-import { Switch } from "@mui/material";
+import {
+  Avatar,
+  Button,
+  IconButton,
+  Menu,
+  MenuItem,
+  Switch,
+} from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import Badge from "@mui/material/Badge";
+import { setLoginData, setUserInfo } from "../store/actions/actions";
+import "./common.css";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -48,12 +58,37 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
+const StyledBadge = styled(Badge)(({ theme }) => ({
+  "& .MuiBadge-badge": {
+    right: -3,
+    top: 13,
+    border: `2px solid ${theme.palette.background.paper}`,
+    padding: "0 4px",
+  },
+}));
+
 export default function Header() {
+  const dispatch = useDispatch();
+  // const
+  const { userInfo } = useSelector((state) => state.userReducer);
   const [checked, setChecked] = useState();
   const handleDarkMode = (e) => {
     e
       ? document.body.setAttribute("id", "darkTheam")
       : document.body.removeAttribute("id");
+  };
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+  const handleLogOut = () => {
+    dispatch(setUserInfo({}));
+    localStorage.clear();
+    handleClose();
   };
   return (
     <div id="header_div">
@@ -86,25 +121,62 @@ export default function Header() {
       />
       <div className="header_nav_div">
         <div>
-          <Link className="darkTheme_link" to="/products">
-            Products
-          </Link>
+          {userInfo.token ? (
+            <Link className="darkTheme_link" to="/products">
+              <div>Products</div>
+            </Link>
+          ) : (
+            <Link to="/sales">
+              <div>Sales</div>
+            </Link>
+          )}
         </div>
         <div>
           <Link className="darkTheme_link" to="/about">
-            About
+            <div>About</div>
           </Link>
         </div>
         <div>
           <Link className="darkTheme_link" to="/contact-us">
-            ContactUs
+            <div>ContactUs</div>
           </Link>
         </div>
-        <div>
-          <Link className="darkTheme_link" to="/login-or-registration">
-            Login
-          </Link>
-        </div>
+        {!userInfo.token ? (
+          <div>
+            <Link className="darkTheme_link" to="/sign-in">
+              <div>Login</div>
+            </Link>
+          </div>
+        ) : (
+          <>
+            <IconButton aria-label="cart">
+              <StyledBadge badgeContent={4} color="secondary">
+                <ShoppingCartIcon />
+              </StyledBadge>
+            </IconButton>
+            <Button
+              id="basic-button"
+              aria-controls={open ? "basic-menu" : undefined}
+              aria-haspopup="true"
+              aria-expanded={open ? "true" : undefined}
+              onClick={handleClick}
+              sx={{ margin: 0 }}>
+              <Avatar>H</Avatar>
+            </Button>
+            <Menu
+              id="basic-menu"
+              anchorEl={anchorEl}
+              open={open}
+              onClose={handleClose}
+              MenuListProps={{
+                "aria-labelledby": "basic-button",
+              }}>
+              <MenuItem onClick={handleClose}>Profile</MenuItem>
+              <MenuItem onClick={handleClose}>My account</MenuItem>
+              <MenuItem onClick={handleLogOut}>Logout</MenuItem>
+            </Menu>
+          </>
+        )}
       </div>
     </div>
   );

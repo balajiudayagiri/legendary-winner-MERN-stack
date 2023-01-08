@@ -1,5 +1,5 @@
 const User_info = {
-  userInfo: [],
+  userInfo: {},
 };
 
 const userReducer = (state = User_info, action) => {

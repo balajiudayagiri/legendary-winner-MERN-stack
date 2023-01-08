@@ -8,10 +8,21 @@ export const setUserInfo = (data) => ({
 });
 
 //async
-export const setLoginData = (pathName, userInfo) => {
+export const setLoginData = (pathName, userdata) => {
   return (dispatch) => {
-    Authentication_loginIn_Register(pathName, userInfo)
+    Authentication_loginIn_Register(pathName, userdata)
       .then((res) => res.json())
-      .then((res) => dispatch(setUserInfo(res)));
+      .then((res) => {
+        localStorage.setItem("authenticationToken", res.token);
+        localStorage.setItem(
+          "userInfo",
+          JSON.stringify({
+            firstName: res.firstName,
+            lastName: res.lastName,
+            email: res.email,
+          })
+        );
+        dispatch(setUserInfo(res));
+      });
   };
 };

@@ -1,8 +1,8 @@
 import * as React from "react";
-import "./TabsVertical.css";
 import Box from "@mui/joy/Box";
 import Button from "@mui/joy/Button";
 import Textarea from "@mui/joy/Textarea";
+import "./TabsVertical.css";
 
 export default function TextareaFormProps() {
   return (

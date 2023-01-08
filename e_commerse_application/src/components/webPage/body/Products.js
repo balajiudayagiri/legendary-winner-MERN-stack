@@ -1,16 +1,16 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import "./Body.css";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import "./Body.css";
 
 export default function Products() {
   const data = useSelector((state) => state.reducer.fetchedData);
-  const dataFakeStore = useSelector((state) => state.userReducer.userInfo);
+  // const dataFakeStore = useSelector((state) => state.userReducer.userInfo);
 
   return (
     <div id="product_div">

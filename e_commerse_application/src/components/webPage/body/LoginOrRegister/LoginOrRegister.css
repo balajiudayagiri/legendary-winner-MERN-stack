@@ -34,6 +34,11 @@ div#body_contains {
 }
 
 .textfeild input {
-    background-color: #fff;
-
+    /* background-color: #fff; */
+    /* color: inherit */
 }
+
+/* div#body_contains {
+    height: calc(100vh - 15.3vh);
+    width: 1366px;
+} */

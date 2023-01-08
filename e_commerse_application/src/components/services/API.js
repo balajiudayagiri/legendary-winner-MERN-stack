@@ -10,6 +10,6 @@ export const Authentication_loginIn_Register = (pathName, data) => {
   });
 };
 
-export const getProducts = (pathName) => {
-  return fetch(`${API_ORIGIN}${pathName}`);
+export const getProducts = () => {
+  return fetch(`${API_ORIGIN}/products`);
 };

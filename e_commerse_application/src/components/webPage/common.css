@@ -2,6 +2,15 @@ p.theme-mode {
     margin: 0px;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: none !important;
+}
+
+head>style:nth-child(21) {
+    box-sizing: border-box !important;
+}
 
 body,
 #root {
@@ -18,6 +27,7 @@ body,
 #header_div {
     box-shadow: 0px 0px 10px 0px gray;
     padding: 5px;
+    height: 52px !important;
 }
 
 
@@ -29,8 +39,6 @@ body,
 .header_nav_div>div {
     margin: 0px 5px;
     height: 39px;
-    display: flex;
-    align-items: center;
     padding: 0px 10px;
 }
 
@@ -48,7 +56,7 @@ body,
 }
 
 div#body_contains {
-    height: calc(100vh - 21.3vh);
+    height: calc(100vh - 23.5vh) !important;
     overflow-y: scroll;
     overflow-x: hidden;
     width: 1326px;
@@ -59,7 +67,17 @@ div#body_contains {
     align-items: center;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: none !important;
+}
 
+#header_div>div.header_nav_div>div>a>div {
+    height: 39px;
+    display: flex;
+    align-items: center;
+}
 
 div#body_contains::-webkit-scrollbar {
     width: 5px

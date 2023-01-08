@@ -1,15 +1,14 @@
 import "./ContactUsMUI/TabsVertical.css";
-import "./Contact.css";
 import * as React from "react";
 import Tabs from "@mui/joy/Tabs";
 import TabList from "@mui/joy/TabList";
 import Tab from "@mui/joy/Tab";
 import TabPanel from "@mui/joy/TabPanel";
 import PhoneIcon from "@mui/icons-material/Phone";
-
 import TextareaFormProps from "./ContactUsMUI/TextareaFormProps";
 import Textarea from "@mui/joy/Textarea";
 import Button from "@mui/joy/Button";
+import "./Contact.css";
 
 export default function ContactUs() {
   return (

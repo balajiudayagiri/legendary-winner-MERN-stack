@@ -1,15 +1,16 @@
 import { Box, Typography } from "@mui/material";
-import React, { useEffect } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import "./Body.css";
 import MediaCard from "./MediaCard";
 import imgShopping from "../../image/shopping.png";
 import imgShopping1 from "../../image/shopping1.png";
 import imgShopping2 from "../../image/shopping2.png";
+import "./Body.css";
 
 export default function Home() {
+  const { userInfo } = useSelector((state) => state.userReducer);
   const data = useSelector((state) => state.reducer.fetchedData);
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const media_card_data = data
     .filter((item, index) => (index + 1) % 4 === 0)
     .map((item) => {
@@ -19,16 +20,11 @@ export default function Home() {
         context: item.productDetails.Description,
       };
     });
-  useEffect(() => {
-    fetch("https://fakestoreapi.com/products/")
-      .then((res) => res.json())
-      .then((res) => dispatch({ type: "USER_INFO", payload: res }));
-  });
   return (
     <>
       <Box sx={{ width: "100%", maxWidth: 500 }}>
         <Typography variant="h1" gutterBottom>
-          Hi, Balaji
+          Hi{userInfo.firstName ? `, ${userInfo.firstName}` : ""}
         </Typography>
         <Typography variant="h3" gutterBottom>
           EveryThing you need is here
