@@ -1,10 +1,10 @@
 import { combineReducers } from "redux";
 import { reducer } from "./reducers";
 import userReducer from "./userReducer";
-// import { themeReducer } from "./themeReducer";
+import { add_to_cart_Reducer } from "./cartReducer";
 
 export const rootReducer = combineReducers({
   reducer,
   userReducer,
-  // themeReducer,
+  add_to_cart_Reducer,
 });

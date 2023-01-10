@@ -97,3 +97,8 @@ hr {
     box-shadow: 0px 0px 10px 0px gray;
     margin: 40px;
 }
+
+.pD_view {
+    height: 450px;
+    width: 1200px;
+}

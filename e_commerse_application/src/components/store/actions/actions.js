@@ -1,9 +1,17 @@
-import { Authentication_loginIn_Register } from "../../services/API";
+import {
+  Authentication_loginIn_Register,
+  fetch_cart_data_POST,
+} from "../../services/API";
 import { USER_INFO } from "./actionTypes";
 
 // synch
 export const setUserInfo = (data) => ({
   type: USER_INFO,
+  payload: data,
+});
+
+export const set_Add_to_cart = (data) => ({
+  type: "CART_DATA",
   payload: data,
 });
 
@@ -24,5 +32,11 @@ export const setLoginData = (pathName, userdata) => {
         );
         dispatch(setUserInfo(res));
       });
+  };
+};
+
+export const setCartData = (cartItem) => {
+  return (dispatch) => {
+    fetch_cart_data_POST("addtocart", cartItem);
   };
 };

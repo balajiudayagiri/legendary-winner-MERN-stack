@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, Navigate } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
@@ -15,8 +15,9 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Badge from "@mui/material/Badge";
-import { setLoginData, setUserInfo } from "../store/actions/actions";
+import { setUserInfo } from "../store/actions/actions";
 import "./common.css";
+import { cart_item } from "../services/API";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -70,7 +71,14 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 export default function Header() {
   const dispatch = useDispatch();
   const { userInfo } = useSelector((state) => state.userReducer);
+  const [cartCount, setCartCount] = useState(0);
+  const cartList = useSelector((state) => state.add_to_cart_Reducer.cart);
   const [checked, setChecked] = useState();
+  useEffect(() => {
+    setCartCount(cartList.length);
+    console.log(cartList);
+  }, [cartList]);
+  // console.log(cartList);
   const handleDarkMode = (e) => {
     e
       ? document.body.setAttribute("id", "darkTheam")
@@ -88,6 +96,9 @@ export default function Header() {
     dispatch(setUserInfo({}));
     localStorage.clear();
     handleClose();
+  };
+  const handleCartIcon = () => {
+    // dispatch(cart_item());
   };
   return (
     <div id="header_div">
@@ -148,11 +159,13 @@ export default function Header() {
           </div>
         ) : (
           <>
-            <IconButton aria-label="cart">
-              <StyledBadge badgeContent={4} color="secondary">
-                <ShoppingCartIcon />
-              </StyledBadge>
-            </IconButton>
+            <Link to="/cart">
+              <IconButton aria-label="cart" onClick={handleCartIcon}>
+                <StyledBadge badgeContent={cartCount} color="secondary">
+                  <ShoppingCartIcon />
+                </StyledBadge>
+              </IconButton>
+            </Link>
             <Button
               id="basic-button"
               aria-controls={open ? "basic-menu" : undefined}
@@ -160,7 +173,10 @@ export default function Header() {
               aria-expanded={open ? "true" : undefined}
               onClick={handleClick}
               sx={{ margin: 0 }}>
-              <Avatar>H</Avatar>
+              <Avatar>
+                {userInfo.firstName.charAt(0).toUpperCase()}
+                {userInfo.lastName.charAt(0).toUpperCase()}
+              </Avatar>
             </Button>
             <Menu
               id="basic-menu"

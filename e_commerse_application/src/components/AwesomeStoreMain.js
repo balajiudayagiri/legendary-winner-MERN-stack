@@ -14,6 +14,8 @@ import SignUp from "./webPage/body/LoginOrRegister/SignUp";
 import { getProducts } from "./services/API";
 import { Typography } from "@mui/material";
 import Root from "./webPage/body/StatusList/Root";
+import ProductDiscriptionPage from "./webPage/body/ProductDiscriptionPage";
+import CartPage from "./webPage/body/cart/CartPage";
 
 // import "./components/webPage/body/ContactUsMUI/TabsVertical.css";
 
@@ -34,6 +36,11 @@ function AwesomeStoreMain() {
           <Route path="/about" element={<About />} />
           <Route element={<SecureRoute />}>
             <Route path="/products" element={<Products />} />
+            <Route
+              path="/productDescription"
+              element={<ProductDiscriptionPage />}
+            />
+            <Route path="/cart" element={<CartPage />} />
           </Route>
           <Route path="/contact-us" element={<ContactUs />} />
           <Route element={<NonSecuredRouter />}>
